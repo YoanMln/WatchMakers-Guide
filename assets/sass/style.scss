@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./variables";
+@import "./mixins";
+
+/* RESET GÉNÉRAL */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: $pastel-grey;
+  color: $light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $yellow;
+}
+
+/* BOUTONS */
+button {
+  @include btnStyle;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  @include btnStyleHover;
+}
+
+/* ------------------ NAVIGATION ------------------ */
+nav {
+  width: 100%;
+  height: 80px;
+  @include flexCenter;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 30;
+}
+
+.nav-logo img {
+  width: 50px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  position: relative;
+
+  li {
+    margin: 0 1rem;
+    position: relative;
+
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      color: $light;
+      font-weight: 400;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+/* BURGER MENU */
+.nav-burger {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 40;
+  display: none;
+
+  .ligne {
+    background: $light;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    position: absolute;
+    transition: all 0.3s ease;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 18px;
+    }
+
+    &:nth-child(3) {
+      top: 36px;
+    }
+  }
+
+  &.active {
+    .ligne:nth-child(1) {
+      top: 18px;
+      transform: rotate(45deg);
+      background: $yellow;
+    }
+
+    .ligne:nth-child(2) {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+
+    .ligne:nth-child(3) {
+      top: 18px;
+      transform: rotate(-45deg);
+      background: $yellow;
+    }
+  }
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media screen and (max-width: 780px) {
+  .nav-menu {
+    @include flexCenter;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 20;
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    li {
+      margin: 2rem 0;
+    }
+  }
+
+  .nav-burger {
+    display: block;
+  }
+}
+
+/* ------------------ HEADER ------------------ */
+
+header {
+  @include flexCenter;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: $pastel-dark;
+  padding: 0 1rem;
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+}
+
+.header-container {
+  max-width: 800px;
+  width: 100%;
+  padding: 0 1rem;
+  color: $light;
+}
+
+.header-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 30px;
+  font-weight: 400;
+  @include flexCenter;
+}
+
+header h1,
+header p {
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 20px;
+}
+
+header a {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 40px;
+  text-align: center;
+  @include btnStyle;
+}
+
+header a:hover {
+  @include btnStyleHover;
+}
+
+/* ------------------ DECOUVERTE ------------------ */
+
+// page container
+.container {
+  max-width: 650px;
+  margin: 50px auto;
+}
+
+// typography
+p {
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 14px;
+  opacity: 0.8;
+  color: $pastel-grey;
+}
+
+h4 {
+  color: $light;
+}
+h5 {
+  font-weight: 200;
+}
+
+// timeline style
+.timeline {
+  position: relative;
+  padding-left: 4rem;
+  margin: 0 0 0 30px;
+  color: white;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: $timeline-body-bg;
+  }
+
+  .timeline-container {
+    position: relative;
+    margin-bottom: 2.5rem;
+
+    .timeline-icon {
+      position: absolute;
+      left: -88px;
+      top: 4px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 2rem;
+      background: $primary;
+
+      i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .timeline-body {
+      background: $timeline-body-bg;
+      border-radius: $timeline-body-round;
+      padding: 20px 20px 15px;
+      box-shadow: $timeline-body-shadow;
+
+      &:before {
+        content: "";
+        background: inherit;
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+        left: -10px;
+        transform: rotate(45deg);
+        border-radius: 0 0 0 2px;
+      }
+
+      .timeline-title {
+        margin-bottom: 1.4rem;
+
+        .badge {
+          background: $pastel-dark;
+          padding: 4px 8px;
+          border-radius: 3px;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+      .timeline-intro {
+        color: $pastel-grey;
+        font-size: 20px;
+      }
+    }
+
+    // Primary Timeline
+    &.primary {
+      .badge,
+      .timeline-icon {
+        background: $primary !important;
+      }
+    }
+  }
+}
