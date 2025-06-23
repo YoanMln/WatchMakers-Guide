@@ -1,4 +1,10 @@
 <main>
+    <div class="title-decouverte">
+        <h1>L'histoire de l'horlogerie</h1>
+        <h2>Découvrir les moments clés ...</h2>
+</main>
+<article>
+    </div>
     <div class="container">
         <div class="timeline">
             <div class="timeline-container primary">
@@ -127,4 +133,5 @@
 
     </div>
     </div>
-</main>
+
+</article>
