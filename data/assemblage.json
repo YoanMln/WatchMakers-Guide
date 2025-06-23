@@ -1,0 +1,99 @@
+[
+  {
+    "outil": "Brucelles",
+    "image": "brucelles.webp",
+    "Utilisation": "Permet la manipulation des pièces du mouvement, rouages, pignons, aiguilles ou les petites vis",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outils": "Tournevis d'horloger",
+    "image": "tournevis.webp",
+    "Utilisation": "Permet le montage / démontage et réglage de la montre. Indispensable, un set peut contenir jusqu'a 10 tournevis !",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outils": "Porte mouvement",
+    "image": "porte-mvt.webp",
+    "Utilisation": "Permet la sécurisation du mouvement lors d'une réparation ou d'un assemblage. Certains support sont spécifique aux dimensions d'un calibre.",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outil": "Loupe d'horloger",
+    "image": "loupe.webp",
+    "Utilisation": "Permet d'améliorer la vision de l'horloger, Différents grossissement existent, comme le x4, x5, ,x10, x15 ou même plus !",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outil": "Protèges doigt pour horloger",
+    "image": "protege-doigt.webp",
+    "Utilisation": "Utilisés pour éviter de déposer de la sueur ou des traces sur les composants délicats lors du montage ou du nettoyage.",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outil": "Huilier",
+    "image": "huilier-horlogerie.webp",
+    "Utilisation": "Permet de contenir différentes huiles utilisées pour lubrifier les rouages, souvent associé à des pointeaux de dépose.",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outil": "Ouvre boîte (clé Jaxa)",
+    "image": "cle-jaxa.webp",
+    "Utilisation": "Permet d’ouvrir les fonds vissés des montres. La clé Jaxa est réglable pour s’adapter à différents diamètres.",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outil": "Levier pour aiguille",
+    "image": "levier.webp",
+    "Utilisation": "Permet de retirer les aiguilles sans les abîmer. Utilisé avec une protection sur le cadran pour éviter les marques.",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outil": "Potence à aiguilles",
+    "image": "potence.webp",
+    "Utilisation": "Permet d’enfoncer les aiguilles sur leurs axes sans les déformer, avec un mouvement droit et contrôlé.",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outil": "Cheville de bois pour horloger",
+    "image": "cheville.webp",
+    "Utilisation": "Utilisée pour nettoyer les pivots, les roues ou les pierres en frottant délicatement. Ne raye pas les composants.",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outil": "Moelle de sureau",
+    "image": "moelle.webp",
+    "Utilisation": "Matériau très léger utilisé pour poser les composants sans les abîmer, ou pour les nettoyer en douceur.",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outil": "Pâte Rodico",
+    "image": "rodico.webp",
+    "Utilisation": "Pâte verte utilisée pour retirer les poussières, les traces de doigts ou l'excès d'huile sur les composants.",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outil": "Poire soufflante pour horloger",
+    "image": "poire.webp",
+    "Utilisation": "Permet de souffler de l’air pour retirer les poussières sans contact. Utile à chaque étape du montage.",
+    "Section": "Assemblage"
+  },
+
+  {
+    "outil": "Benzinier",
+    "image": "benzinier.webp",
+    "Utilisation": "Petit récipient utilisé pour contenir du solvant comme l’essence C afin de nettoyer les composants mécaniques.",
+    "Section": "Assemblage"
+  }
+]
