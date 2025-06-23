@@ -22,7 +22,7 @@
                 <a href="index.php?pages=home">Accueil</a>
             </li>
             <li>
-                <a href="index.php?pages=Outils-de-lartisan">Outils de l'artisan</a>
+                <a href="index.php?pages=Outils-de-lhorloger">Outils de l'horloger</a>
             </li>
             <li>
                 <a href="index.php?pages=Techniques">Téchniques</a>
