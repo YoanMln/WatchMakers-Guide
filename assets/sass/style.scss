@@ -24,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $yellow;
+  color: $bronze;
 }
 
 /* BOUTONS */
@@ -65,12 +65,12 @@ nav {
     a {
       text-decoration: none;
       font-size: 20px;
-      color: $light;
+      color: $matte-black;
       font-weight: 400;
       transition: color 0.3s ease;
 
       &:hover {
-        color: $yellow;
+        color: $bronze;
       }
     }
   }
@@ -112,7 +112,7 @@ nav {
     .ligne:nth-child(1) {
       top: 18px;
       transform: rotate(45deg);
-      background: $yellow;
+      background: $bronze;
     }
 
     .ligne:nth-child(2) {
@@ -123,7 +123,7 @@ nav {
     .ligne:nth-child(3) {
       top: 18px;
       transform: rotate(-45deg);
-      background: $yellow;
+      background: $bronze;
     }
   }
 }
@@ -214,16 +214,26 @@ header a:hover {
 
 // page container
 .container {
-  max-width: 650px;
-  margin: 50px auto;
+  max-width: $container-max-width;
+  margin: $container-margin;
+  margin-top: $container-margin;
+}
+
+.title-decouverte {
+  @include flexCenter;
+  @include column;
+  margin-top: $-title-decouverte-margin-top;
+  h2 {
+    color: $matte-black;
+  }
 }
 
 // typography
 p {
-  font-weight: 300;
-  line-height: 1.5;
-  font-size: 14px;
-  opacity: 0.8;
+  font-weight: $p-font-weight;
+  line-height: $p-line-height;
+  font-size: $p-font-size;
+  opacity: $p-opacity;
   color: $pastel-grey;
 }
 
@@ -231,7 +241,7 @@ h4 {
   color: $light;
 }
 h5 {
-  font-weight: 200;
+  font-weight: $time-line-font-weight-h5;
 }
 
 // timeline style
@@ -324,3 +334,17 @@ h5 {
     }
   }
 }
+
+// Outils de l'horloger
+
+.title-outils {
+  @include flexCenter;
+  @include column;
+  margin-top: $margin-top-h1;
+
+  h2 {
+    margin-top: 1rem;
+  }
+}
+
+
