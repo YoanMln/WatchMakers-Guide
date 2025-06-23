@@ -356,9 +356,9 @@ h5 {
   }
 
   .tools-grid {
-    display: grid;
+    @include flexCenter;
+    flex-wrap: wrap;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
   .tool-card {
@@ -367,10 +367,13 @@ h5 {
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 305px;
+    height: 400px;
 
     .tool-image {
       max-width: 100%;
-      height: auto;
+      height: 200px;
+
       margin-bottom: 1rem;
     }
 
