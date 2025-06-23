@@ -1,6 +1,6 @@
 <main>
     <div class="title-outils">
-        <h1>Découvrez les différents outils de l'artisan horloger</h1>
+        <h1>Les différents outils de l'artisan horloger</h1>
         <div class="intro-page">
             <h2>Découvrez les instruments essentiels du métier d’horloger, entre tradition et précision.</h2>
         </div>
@@ -9,7 +9,7 @@
 
 <?php
 
-$selectedOutils = isset($_POST['assemblage']) ? $_POST['assemblage'] : 'all';
+$selectedOutils = isset($_POST['outils']) ? $_POST['outils'] : 'all';
 
 ?>
 
@@ -20,9 +20,9 @@ $selectedOutils = isset($_POST['assemblage']) ? $_POST['assemblage'] : 'all';
             <label for="element-choice">Choix du type d'outils </label><br>
             <select name="outils" id="element-choice" onchange="this.form.submit()">
                 <option value="all" <?= ($selectedOutils == 'all') ? 'selected' : '' ?>>Tous les outils</option>
-                <option value="Assemblage" <?= ($selectedOutils == 'Assemblage') ? 'selected' : '' ?>>Assemblage</option>
-                <option value="Reglage" <?= ($selectedOutils == 'Reglage') ? 'selected' : '' ?>>Réglage</option>
-                <option value="Controle" <?= ($selectedOutils == 'Controle') ? 'selected' : '' ?>>Contrôle</option>
+                <option value="assemblage" <?= ($selectedOutils == 'assemblage') ? 'selected' : '' ?>>Assemblage</option>
+                <option value="reglage" <?= ($selectedOutils == 'reglage') ? 'selected' : '' ?>>Réglage</option>
+                <option value="controle" <?= ($selectedOutils == 'controle') ? 'selected' : '' ?>>Contrôle</option>
             </select>
         </div>
 
@@ -34,8 +34,24 @@ $selectedOutils = isset($_POST['assemblage']) ? $_POST['assemblage'] : 'all';
 
     <div class="tools-grid">
         <?php
+
+        $jsonFile = '';
+        switch ($selectedOutils) {
+            case 'assemblage';
+                $jsonFile = './data/assemblage.json';
+                break;
+            case 'reglage';
+                $jsonFile = './data/reglage.json';
+                break;
+            case 'controle';
+                $jsonFile = './data/controle.json';
+                break;
+            default:
+                $jsonFile = './data/assemblage.json';
+        }
+
         // Lecture du fichier JSON des outils
-        $json = file_get_contents('./data/assemblage.json');
+        $json = file_get_contents($jsonFile);
         $tools = json_decode($json, true);
 
         if ($tools) {
@@ -47,7 +63,7 @@ $selectedOutils = isset($_POST['assemblage']) ? $_POST['assemblage'] : 'all';
 
                 echo '<article class="tool-card">';
                 echo '<h2>' . htmlspecialchars($name) . '</h2>';
-                echo "<img src='assets/images/img-assemblage/" . htmlspecialchars($image) . "' alt='" . htmlspecialchars($name) . "' class='tool-image'>";
+                echo "<img src='assets/images/img-outils/" . htmlspecialchars($image) . "' alt='" . htmlspecialchars($name) . "' class='tool-image'>";
                 echo '<p>' . htmlspecialchars($use) . '</p>';
                 echo '</article>';
             }
@@ -56,4 +72,7 @@ $selectedOutils = isset($_POST['assemblage']) ? $_POST['assemblage'] : 'all';
         }
         ?>
     </div>
+
+
+
 </section>
