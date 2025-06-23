@@ -31,7 +31,7 @@ $selectedOutils = isset($_POST['assemblage']) ? $_POST['assemblage'] : 'all';
 
 
 <section class="container-tools">
-    <h1>Les outils de l'horloger</h1>
+
     <div class="tools-grid">
         <?php
         // Lecture du fichier JSON des outils
