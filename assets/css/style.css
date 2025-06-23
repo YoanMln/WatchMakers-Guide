@@ -80,7 +80,7 @@ nav {
 .nav-menu li a {
   text-decoration: none;
   font-size: 20px;
-  color: lightgrey;
+  color: #28282b;
   font-weight: 400;
   transition: color 0.3s ease;
 }
@@ -232,6 +232,18 @@ header a:hover {
 .container {
   max-width: 650px;
   margin: 50px auto;
+  margin-top: 50px auto;
+}
+
+.title-decouverte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.title-decouverte h2 {
+  color: #28282b;
 }
 
 p {
@@ -325,6 +337,17 @@ h5 {
 .timeline .timeline-container.primary .badge,
 .timeline .timeline-container.primary .timeline-icon {
   background: #907c64 !important;
+}
+
+.title-outils {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.title-outils h2 {
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
