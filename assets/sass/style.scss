@@ -49,8 +49,17 @@ nav {
   z-index: 30;
 }
 
-.nav-logo img {
-  width: 50px;
+.nav-logo {
+  width: 20%;
+  height: auto;
+
+  img {
+    width: 25%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 2rem;
+    border-radius: 30%;
+  }
 }
 
 .nav-menu {
@@ -155,6 +164,19 @@ nav {
   .nav-burger {
     display: block;
   }
+
+  .nav-logo {
+    width: 20%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      margin-top: 2rem;
+      border-radius: 30%;
+    }
+  }
 }
 
 /* ------------------ HEADER ------------------ */
@@ -163,7 +185,7 @@ header {
   @include flexCenter;
   max-width: 100%;
   min-height: 100vh;
-  background-color: $pastel-dark;
+  background: url("../images/img/bg-home.webp") center/cover no-repeat;
   padding: 0 1rem;
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
 }
