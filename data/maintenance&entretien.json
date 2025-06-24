@@ -1,0 +1,18 @@
+[
+  {
+    "outil": "Machine de nettoyage",
+    "image": "nettoyage.webp",
+    "Utilisation": "Appareil complet de nettoyage horloger, combinant plusieurs bains avec un séchage rapide par chambre chauffante, utilisé lors des révisions complètes pour un nettoyage optimal."
+  },
+  {
+    "outil": "Cuve à ultrason",
+    "image": "ultrason.webp",
+    "Utilisation": "Nettoyage en profondeur par ultrason des composants avant l’assemblage ou lors de révision."
+  },
+
+  {
+    "outil": "Démagnétiseur de montre",
+    "image": "demagnetiseur.webp",
+    "Utilisation": " Supprime les champs magnétiques présents dans les composants, qui peuvent perturber la marche du mouvement."
+  }
+]
