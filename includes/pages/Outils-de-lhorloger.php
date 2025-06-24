@@ -21,8 +21,8 @@ $selectedOutils = isset($_POST['outils']) ? $_POST['outils'] : 'all';
             <select name="outils" id="element-choice" onchange="this.form.submit()">
                 <option value="all" <?= ($selectedOutils == 'all') ? 'selected' : '' ?>>Tous les outils</option>
                 <option value="assemblage" <?= ($selectedOutils == 'assemblage') ? 'selected' : '' ?>>Assemblage</option>
-                <option value="reglage" <?= ($selectedOutils == 'reglage') ? 'selected' : '' ?>>Réglage</option>
-                <option value="controle" <?= ($selectedOutils == 'controle') ? 'selected' : '' ?>>Contrôle</option>
+                <option value="reglage&controle" <?= ($selectedOutils == 'reglage&controle') ? 'selected' : '' ?>>Réglage & Contrôle</option>
+                <option value="maintenance&entretien" <?= ($selectedOutils == 'maintenance&entretien') ? 'selected' : '' ?>>Maintenance & Entretien</option>
             </select>
         </div>
 
@@ -40,11 +40,11 @@ $selectedOutils = isset($_POST['outils']) ? $_POST['outils'] : 'all';
             case 'assemblage';
                 $jsonFile = './data/assemblage.json';
                 break;
-            case 'reglage';
-                $jsonFile = './data/reglage.json';
+            case 'reglage&controle';
+                $jsonFile = './data/reglage&controle.json';
                 break;
-            case 'controle';
-                $jsonFile = './data/controle.json';
+            case 'maintenance&entretien';
+                $jsonFile = './data/maintenance&entretien.json';
                 break;
             default:
                 $jsonFile = './data/assemblage.json';
