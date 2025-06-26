@@ -76,6 +76,10 @@ nav {
   border-radius: 30%;
 }
 
+.title {
+  display: none;
+}
+
 .nav-menu {
   list-style: none;
   display: flex;
@@ -162,19 +166,14 @@ nav {
   .nav-menu li {
     margin: 2rem 0;
   }
+  .title {
+    margin-right: 6rem;
+  }
   .nav-burger {
     display: block;
   }
-  .nav-logo {
-    width: 20%;
-    height: auto;
-  }
   .nav-logo img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-top: 2rem;
-    border-radius: 30%;
+    display: none;
   }
 }
 /* ------------------ HEADER ------------------ */
@@ -448,19 +447,19 @@ main::before {
   box-shadow: 0 0 0 2px rgba(144, 124, 100, 0.3);
 }
 
-.container-tools {
+.container-card {
   position: relative;
   z-index: 2;
   padding: 2rem;
 }
-.container-tools .tools-grid {
+.container-card .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
-.container-tools .tool-card {
+.container-card .card {
   background-color: rgba(211, 211, 211, 0.95);
   border-radius: 1rem;
   padding: 1.5rem;
@@ -468,22 +467,22 @@ main::before {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.container-tools .tool-card:hover {
+.container-card .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(40, 40, 43, 0.15);
 }
-.container-tools .tool-card .tool-image {
+.container-card .card .card-image {
   width: 100%;
   height: 200px;
   object-fit: contain;
   margin-bottom: 1.5rem;
 }
-.container-tools .tool-card h2 {
+.container-card .card h2 {
   color: #907c64;
   font-size: 1.4rem;
   margin-bottom: 1rem;
 }
-.container-tools .tool-card p {
+.container-card .card p {
   color: #28282b;
   font-size: 1rem;
   line-height: 1.6;
