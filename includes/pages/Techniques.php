@@ -23,5 +23,50 @@
 
         </form>
     </div>
+    <section class="container-tech">
 
+        <div class="tech-grid">
+            <?php
+
+            $jsonFile = '';
+            switch ($selectedTechniques) {
+                case 'posage';
+                    $jsonFile = './data/posage.json';
+                    break;
+                case 'emboitage';
+                    $jsonFile = './data/emboitage.json';
+                    break;
+                case 'controle';
+                    $jsonFile = './data/controle.json';
+                    break;
+                default:
+                    $jsonFile = './data/posage.json';
+            }
+
+
+            $json = file_get_contents($jsonFile);
+            $tech = json_decode($json, true);
+
+            if ($tools) {
+                foreach ($tech as $tech) {
+
+                    $name = isset($tech['outil']) ? $tech['outil'] : $tech['outils'];
+                    $image = isset($tech['image']) ? $tech['image'] : 'default.webp';
+                    $use = isset($tech['détails']) ? $tech['details'] : 'detail non précisée.';
+
+                    echo '<article class="tool-card">';
+                    echo '<h2>' . htmlspecialchars($name) . '</h2>';
+                    echo "<img src='assets/images/img-tech/" . htmlspecialchars($image) . "' alt='" . htmlspecialchars($name) . "' class='tech-image'>";
+                    echo '<p>' . htmlspecialchars($use) . '</p>';
+                    echo '</article>';
+                }
+            } else {
+                echo '<p>Les téchniques n\'ont pas pu être chargés.</p>';
+            }
+            ?>
+        </div>
+
+
+
+    </section>
 </main>
