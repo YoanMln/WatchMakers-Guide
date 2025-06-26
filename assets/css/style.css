@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* ------------------ HEADER ------------------ */
 /* ------------------ DECOUVERTE ------------------ */
 /* RESET GÉNÉRAL */
 *,
@@ -30,7 +31,7 @@ button {
   outline: none;
   border: none;
   background: none;
-  color: lightgrey;
+  color: white;
   font-weight: 600;
   display: inline-block;
   width: 150px;
@@ -71,7 +72,7 @@ nav {
   width: 25%;
   height: auto;
   object-fit: contain;
-  margin-top: 2rem;
+  margin-top: 1px;
   border-radius: 30%;
 }
 
@@ -178,16 +179,24 @@ nav {
 }
 /* ------------------ HEADER ------------------ */
 header {
-  clip-path: polygon(0% 1%, 100% 0, 100% 95%, 0% 100%);
-  min-height: 100vh;
-  width: 100%;
-  padding: 1rem 0;
-  margin: 1rem 0;
-  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
   background: url("../images/img/bg-home.webp") center/cover no-repeat;
+  padding: 4rem 0;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(40, 40, 43, 0.8), rgba(40, 40, 43, 0.6));
+  z-index: 1;
 }
 
 .header-container {
@@ -207,19 +216,29 @@ header {
 
 header h1 {
   font-size: 30px;
-  font-weight: 400;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 header h1,
-header p {
-  margin-bottom: 1rem;
+header h2,
+.btn-container-home,
+.header-img {
+  position: relative;
+  z-index: 2;
 }
 
-header p {
-  font-size: 20px;
+header h2 {
+  margin-top: 3rem;
+  font-size: 18px;
+  color: white;
+}
+
+.btn-container-home {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 header a {
@@ -230,7 +249,7 @@ header a {
   outline: none;
   border: none;
   background: none;
-  color: lightgrey;
+  color: white;
   font-weight: 600;
   display: inline-block;
   width: 150px;
@@ -361,13 +380,21 @@ h5 {
 
 /* ------------------ OUTILS DE L'HORLOGER ------------------ */
 main {
-  background: url(../images/img/main-outils.webp) center/cover no-repeat;
-  clip-path: polygon(0% 1%, 100% 0, 100% 95%, 0% 100%);
+  position: relative;
   min-height: 100vh;
   width: 100%;
-  padding: 1rem 0;
-  margin: 1rem 0;
-  max-width: 100%;
+  background: url("../images/img/main-outils.webp") center/cover no-repeat;
+  padding: 2rem 0;
+}
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 40, 43, 0.7);
+  z-index: 1;
 }
 
 .title-outils {
@@ -375,64 +402,104 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 5rem;
+  position: relative;
+  z-index: 2;
+  margin: 1rem 0 2rem;
 }
 .title-outils h2 {
+  color: lightgrey;
+  text-align: center;
   margin-top: 1rem;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(40, 40, 43, 0.5);
 }
 
 .container-select {
-  margin-top: 1rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
 }
 .container-select .list-choice {
-  margin-left: 9.5rem;
-}
-
-.container-tools {
-  padding: 2rem;
-}
-.container-tools h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.container-tools .tools-grid {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+}
+.container-select .list-choice label {
+  color: white;
+}
+.container-select .list-choice select {
+  width: 80%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 2px solid #907c64;
+  background-color: rgba(211, 211, 211, 0.9);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.container-select .list-choice select:hover {
+  background-color: lightgrey;
+  border-color: rgb(113.9016393443, 98.0819672131, 79.0983606557);
+}
+.container-select .list-choice select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(144, 124, 100, 0.3);
+}
+
+.container-tools {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+.container-tools .tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .container-tools .tool-card {
-  background-color: rgba(245, 245, 247, 0.8235294118);
+  background-color: rgba(211, 211, 211, 0.95);
   border-radius: 1rem;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(40, 40, 43, 0.1);
   text-align: center;
-  width: 305px;
-  height: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container-tools .tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(40, 40, 43, 0.15);
 }
 .container-tools .tool-card .tool-image {
-  max-width: 100%;
+  width: 100%;
   height: 200px;
-  margin-bottom: 1rem;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
 }
 .container-tools .tool-card h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  color: #907c64;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 .container-tools .tool-card p {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: black;
+  color: #28282b;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 780px) {
   .container-select {
-    margin-top: 1rem;
+    padding: 0 1rem;
   }
-  .container-select .list-choice {
-    margin-left: 0;
-    text-align: center;
+  .container-select .list-choice select {
+    width: 100%;
+  }
+  .tool-card {
+    margin: 0 auto;
+    max-width: 350px;
   }
 }
 
