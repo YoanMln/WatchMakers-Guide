@@ -12,20 +12,20 @@
         <form action="index.php?pages=Techniques" method="POST">
 
             <div class="list-choice">
-                <label for="element-choice">Choix de l'étape d'assemblage </label><br>
+                <label for="element-choice">Choix de l'étape d'assemblage sur un mouvement 2824 </label><br>
                 <select name="techniques" id="element-choice" onchange="this.form.submit()">
                     <option value="all" <?= ($selectedTechniques == 'all') ? 'selected' : '' ?>>Toutes les étapes</option>
                     <option value="posage" <?= ($selectedTechniques == 'posage') ? 'selected' : '' ?>>Posage</option>
-                    <option value="emboitage" <?= ($selectedTechniques == 'emboitage') ? 'selected' : '' ?>>Emboîtage</option>
-                    <option value="reglage" <?= ($selectedTechniques == 'reglage') ? 'selected' : '' ?>>Réglage</option>
+                    <option value="aiguillage" <?= ($selectedTechniques == 'aiguillage') ? 'selected' : '' ?>>Aiguillage</option>
+                    <option value="tolerance&controle" <?= ($selectedTechniques == 'tolerance&controle') ? 'selected' : '' ?>>Tolerance et contrôle</option>
                 </select>
             </div>
 
         </form>
     </div>
-    <section class="container-tech">
+    <section class="container-card">
 
-        <div class="tech-grid">
+        <div class="card-grid">
             <?php
 
             $jsonFile = '';
@@ -33,11 +33,11 @@
                 case 'posage';
                     $jsonFile = './data/posage.json';
                     break;
-                case 'emboitage';
-                    $jsonFile = './data/emboitage.json';
+                case 'aiguillage';
+                    $jsonFile = './data/aiguillage.json';
                     break;
-                case 'controle';
-                    $jsonFile = './data/controle.json';
+                case 'tolerance&controle';
+                    $jsonFile = './data/tolerance&controle.json';
                     break;
                 default:
                     $jsonFile = './data/posage.json';
@@ -52,16 +52,31 @@
 
                     $name = isset($tech['etape']) ? $tech['etape'] : $tech['etape'];
                     $image = isset($tech['image']) ? $tech['image'] : 'default.webp';
-                    $use = isset($tech['détails']) ? $tech['details'] : 'detail non précisée.';
+                    $details = isset($tech['details']) ? $tech['details'] : 'null';
 
-                    echo '<article class="tool-card">';
+                    echo '<article class="card">';
                     echo '<h2>' . htmlspecialchars($name) . '</h2>';
-                    echo "<img src='assets/images/img-tech/" . htmlspecialchars($image) . "' alt='" . htmlspecialchars($name) . "' class='tech-image'>";
-                    echo '<p>' . htmlspecialchars($use) . '</p>';
+                    echo "<img src='assets/images/img-tech/" . htmlspecialchars($image) . "' alt='" . htmlspecialchars($name) . "' class='card-image'>";
+
+                    // Si détails -> tableau = liste 
+
+                    if (is_array($details)) {
+                        echo '<ul>';
+                        foreach ($details as $desc) {
+                            echo '<li>' . htmlspecialchars($desc) . '</li>';
+                        }
+                        echo '</ul>';
+                    } elseif (is_string($details)) {
+
+                        echo '<p>' . htmlspecialchars($details) . '</p>';
+                    } else {
+                        echo '<p>Détail non précisé.</p>';
+                    }
+
                     echo '</article>';
                 }
             } else {
-                echo '<p>Les téchniques n\'ont pas pu être chargés.</p>';
+                echo '<p>Les techniques n\'ont pas pu être chargés.</p>';
             }
             ?>
         </div>
