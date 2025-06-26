@@ -50,7 +50,7 @@
             if ($tools) {
                 foreach ($tech as $tech) {
 
-                    $name = isset($tech['outil']) ? $tech['outil'] : $tech['outils'];
+                    $name = isset($tech['etape']) ? $tech['etape'] : $tech['etape'];
                     $image = isset($tech['image']) ? $tech['image'] : 'default.webp';
                     $use = isset($tech['détails']) ? $tech['details'] : 'detail non précisée.';
 
