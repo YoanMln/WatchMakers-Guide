@@ -47,7 +47,7 @@
             $json = file_get_contents($jsonFile);
             $tech = json_decode($json, true);
 
-            if ($tools) {
+            if ($tech) {
                 foreach ($tech as $tech) {
 
                     $name = isset($tech['etape']) ? $tech['etape'] : $tech['etape'];
