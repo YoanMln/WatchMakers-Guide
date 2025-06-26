@@ -4,6 +4,26 @@ $matte-black: #28282b;
 $pastel-dark: #2c2c2c;
 $pastel-grey: white;
 
+/* ------------------ HEADER ------------------ */
+
+$container-max-width: 1200px;
+$padding-section: 4rem;
+$padding-container: 2rem;
+$padding-container-mobile: 1rem;
+$margin-bottom-title: 2rem;
+$margin-bottom-text: 1.5rem;
+$margin-vertical: 2rem;
+$font-size-button: 1rem;
+$font-weigth-h1: bold;
+$box-shadow-img: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+// Transitions
+$transition-speed: 0.3s;
+$transition-timing: ease;
+
+// Breakpoints
+$mobile: 780px;
+
 /* ------------------ DECOUVERTE ------------------ */
 $primary: #907c64;
 $secondary: #4f537b;
@@ -34,4 +54,4 @@ $-title-decouverte-margin-top: 5rem;
 
 // Outils
 
-$margin-top-h1: 5rem;
+$margin-top-h1: 1rem;
