@@ -1,0 +1,29 @@
+[
+  {
+    "etape": "Saut de date",
+    "image": "saut.webp",
+    "details": "Faire tourner la tige de remontoir pour faire sauter la date (quand la date commence à passer, tourner lentement, natif de remontoir pour faire passer le saut à minuit précise)"
+  },
+  {
+    "etape": "Pose d'aiguilles",
+    "image": "pose.webp",
+    "details": [
+      "Positionner l'aiguille avec la  brucelle à bec plat. Enfoncez l'aiguille sur la roue des heures à l'aide du chasse aiguille correspondant. L'aiguille d’heure doit être chassée à fleur de la roue des heures.",
+      "Verifier le parallélisme de l'aiguille par rapport au cadran",
+      "Verifier que l'aiguille saute à minuit précise",
+      "Positionner l'aiguille de minutes avec la brucelle à bec plat, enfoncer l'aiguille sur la chaussée à l'aide du chasse et aiguille correspondant. L'aiguille de minutes doit être posée à fleur de la chaussée."
+    ]
+  },
+
+  {
+    "etape": "Parallélisme et partagement",
+    "image": "partagement.webp",
+    "details": [
+      "Vérifier le parallélisme et le partagement des aiguilles",
+      "Vérifier le repère à midi, (tolérance +/- 1mn)",
+      "Vérifier le saut à minuit (tolérance +/- 2mn)",
+      "Positionner l'aiguille de seconde avec la brucelle à bec plat, enfoncer l'aiguille sur le pivot de seconde à l'aide du chasse aiguille correspondant",
+      "Vérifier le parallélisme et le partagement des aiguilles"
+    ]
+  }
+]
