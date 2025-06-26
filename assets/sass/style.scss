@@ -15,7 +15,6 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: $pastel-grey;
-  color: $light;
 }
 
 h1,
@@ -182,12 +181,10 @@ nav {
 /* ------------------ HEADER ------------------ */
 
 header {
+  @include clipPath;
   @include flexCenter;
-  max-width: 100%;
-  min-height: 100vh;
+
   background: url("../images/img/bg-home.webp") center/cover no-repeat;
-  padding: 0 1rem;
-  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
 }
 
 .header-container {
@@ -357,7 +354,12 @@ h5 {
   }
 }
 
-// Outils de l'horloger
+/* ------------------ OUTILS DE L'HORLOGER ------------------ */
+
+main {
+  background: url(../images/img/main-outils.webp) center / cover no-repeat;
+  @include clipPath;
+}
 
 .title-outils {
   @include flexCenter;
@@ -366,6 +368,14 @@ h5 {
 
   h2 {
     margin-top: 1rem;
+  }
+}
+
+.container-select {
+  margin-top: 1rem;
+
+  .list-choice {
+    margin-left: 9.5rem;
   }
 }
 
@@ -384,7 +394,7 @@ h5 {
   }
 
   .tool-card {
-    background-color: #fff;
+    background-color: #f5f5f7d2;
     border-radius: 1rem;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -406,7 +416,18 @@ h5 {
 
     p {
       font-size: 0.95rem;
-      color: #444;
+      font-weight: 600;
+      color: black;
+    }
+  }
+}
+@media screen and (max-width: 780px) {
+  .container-select {
+    margin-top: 1rem;
+
+    .list-choice {
+      margin-left: 0;
+      @include text-center;
     }
   }
 }

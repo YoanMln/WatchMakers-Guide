@@ -14,7 +14,6 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: white;
-  color: lightgrey;
 }
 
 h1,
@@ -179,14 +178,16 @@ nav {
 }
 /* ------------------ HEADER ------------------ */
 header {
+  clip-path: polygon(0% 1%, 100% 0, 100% 95%, 0% 100%);
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
-  min-height: 100vh;
   background: url("../images/img/bg-home.webp") center/cover no-repeat;
-  padding: 0 1rem;
-  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
 }
 
 .header-container {
@@ -358,6 +359,17 @@ h5 {
   background: #907c64 !important;
 }
 
+/* ------------------ OUTILS DE L'HORLOGER ------------------ */
+main {
+  background: url(../images/img/main-outils.webp) center/cover no-repeat;
+  clip-path: polygon(0% 1%, 100% 0, 100% 95%, 0% 100%);
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  max-width: 100%;
+}
+
 .title-outils {
   display: flex;
   justify-content: center;
@@ -367,6 +379,13 @@ h5 {
 }
 .title-outils h2 {
   margin-top: 1rem;
+}
+
+.container-select {
+  margin-top: 1rem;
+}
+.container-select .list-choice {
+  margin-left: 9.5rem;
 }
 
 .container-tools {
@@ -384,7 +403,7 @@ h5 {
   gap: 2rem;
 }
 .container-tools .tool-card {
-  background-color: #fff;
+  background-color: rgba(245, 245, 247, 0.8235294118);
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -403,7 +422,18 @@ h5 {
 }
 .container-tools .tool-card p {
   font-size: 0.95rem;
-  color: #444;
+  font-weight: 600;
+  color: black;
+}
+
+@media screen and (max-width: 780px) {
+  .container-select {
+    margin-top: 1rem;
+  }
+  .container-select .list-choice {
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
