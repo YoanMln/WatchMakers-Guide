@@ -15,11 +15,12 @@
 @mixin btnStyle {
   outline: none;
   border: none;
-  background: none;
+  background: rgba(0, 0, 0, 0.569);
   color: $pastel-grey;
-  font-weight: 600;
+  white-space: nowrap;
+  font-weight: 400;
   display: inline-block;
-  width: 150px;
+  min-width: 250px;
   height: 40px;
   border: 1px solid $bronze;
   border-radius: 5px;
