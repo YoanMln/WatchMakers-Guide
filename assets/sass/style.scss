@@ -7,14 +7,14 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+  margin: $margin-reset;
+  padding: $padding-reset;
+  box-sizing: $box-sizing-reset;
+  scroll-behavior: $scroll-behavior-reset;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: $FontFamily-body;
   background-color: $pastel-grey;
 }
 
@@ -25,15 +25,15 @@ h4,
 h5,
 h6 {
   color: $bronze;
-  font-family: "Alumni Sans", sans-serif;
-  font-weight: 500;
+  font-family: $h1-to-h6-font-family;
+  font-weight: $h1-to-h6-font-weight;
 }
 
 /* BOUTONS */
 button {
   @include btnStyle;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  transition: $transition-btn;
+  cursor: $cursor-btn;
 }
 
 button:hover {
@@ -42,25 +42,26 @@ button:hover {
 
 /* ------------------ NAVIGATION ------------------ */
 nav {
-  width: 100%;
-  height: 80px;
+  width: $nav-width;
+  height: $nav-heigt;
   @include flexCenter;
   justify-content: space-between;
-  padding: 0 2rem;
-  position: relative;
-  z-index: 30;
+  padding: $nav-padding;
+  position: $nav-position;
+  z-index: $nav-z-index;
+  background-color: $light;
 }
 
 .nav-logo {
-  width: 20%;
-  height: auto;
+  width: $nav-logo-width;
+  height: $nav-logo-height;
 
   img {
-    width: 25%;
-    height: auto;
-    object-fit: contain;
-    margin-top: 1px;
-    border-radius: 30%;
+    width: $nav-img-width;
+    height: $nav-img-height;
+    object-fit: $nav-img-objet-fit;
+    margin-top: $nav-img-margin-top;
+    border-radius: $nav-img-border-radius;
   }
 }
 
@@ -96,22 +97,22 @@ nav {
 
 /* BURGER MENU */
 .nav-burger {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 35px;
-  height: 35px;
+  position: $burger-position;
+  top: $burger-top;
+  right: $burger-right;
+  width: $burger-width;
+  height: $burger-heigt;
   cursor: pointer;
-  z-index: 40;
+  z-index: $burger-z-index;
   display: none;
 
   .ligne {
     background: $light;
-    width: 100%;
-    height: 3px;
-    border-radius: 2px;
-    position: absolute;
-    transition: all 0.3s ease;
+    width: $burger-line-width;
+    height: $burger-line-height;
+    border-radius: $burger-line-border-radius;
+    position: $burger-line-position;
+    transition: $burger-line-transition;
 
     &:nth-child(1) {
       top: 0;
@@ -196,19 +197,16 @@ nav {
 
 header {
   @include flexCenter;
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
+  position: $header-position;
+  min-height: $header-min-height;
+  width: $header-width;
   background: url("../images/img/bg-home.webp") center/cover no-repeat;
-  padding: $padding-section 0;
+  padding: $header-padding;
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: linear-gradient(
       to bottom,
       rgba($matte-black, 0.8),
@@ -219,178 +217,69 @@ header {
 }
 
 .header-container {
-  max-width: 800px;
-  width: 100%;
-  padding: 0 1rem;
+  position: $header-container-position;
+  z-index: $header-container-z-index;
+  max-width: $header-container-max-width;
+  width: $header-container-width;
+  padding: $header-container-padding;
   color: $light;
-}
-
-.header-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 400px;
-  margin: 0 auto;
+  text-align: $header-container-text-align;
 }
 
 header h1 {
-  font-size: 35px;
-  font-weight: $font-weigth-h1;
-  @include flexCenter;
-}
-
-header h1,
-header h2,
-.btn-container-home,
-.header-img {
-  position: relative;
-  z-index: 2;
+  font-size: $header-h1-font-size-clamp;
+  font-weight: $header-h1-font-weight;
+  margin-bottom: $header-h1-margin-bottom;
+  color: $light;
+  text-transform: uppercase;
+  letter-spacing: $header-h1-letter-spacing;
+  text-shadow: 2px 2px 4px rgba($matte-black, 0.5);
 }
 
 header h2 {
-  margin-top: 3rem;
-  font-size: 18px;
-  color: $pastel-grey;
+  font-size: $header-h2-font-size-clamp;
+  color: $bronze;
+  font-weight: $header-h2-font-weight;
+  line-height: $header-h2-line-height;
+  margin: $header-h2-margin;
+  max-width: $header-h2-max-width;
+  text-shadow: 1px 1px 2px rgba($matte-black, 0.3);
 }
 
 .btn-container-home {
-  @include text-center;
-  margin-top: 2rem;
-}
-
-header a {
-  text-decoration: none;
-  font-size: 15px;
-  line-height: 40px;
-  text-align: center;
-  @include btnStyle;
-}
-
-header a:hover {
-  @include btnStyleHover;
-}
-
-/* ------------------ DECOUVERTE ------------------ */
-
-// page container
-.container {
-  max-width: $container-max-width;
-  margin: $container-margin;
-  margin-top: $container-margin;
-}
-
-.title-decouverte {
   @include flexCenter;
-  @include column;
-  margin-top: $-title-decouverte-margin-top;
-  h2 {
-    color: $matte-black;
+  gap: $btn-container-home-gap;
+  margin-top: $btn-container-home-margin-top;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: $btn-home-a-text-decoration;
+    font-size: $btn-home-a-font-size;
+    min-width: $btn-home-a-min-width;
+    padding: $btn-home-a-padding;
+    text-align: $btn-home-a-text-align;
+    @include btnStyle;
+    transition: $btn-home-a-transition;
+
+    &:hover {
+      @include btnStyleHover;
+      transform: $btn-home-a-transform;
+    }
   }
 }
 
-// typography
-p {
-  font-weight: $p-font-weight;
-  line-height: $p-line-height;
-  font-size: $p-font-size;
-  opacity: $p-opacity;
-  color: $pastel-grey;
-}
-
-h4 {
-  color: $light;
-}
-h5 {
-  font-weight: $time-line-font-weight-h5;
-}
-
-// timeline style
-.timeline {
-  position: relative;
-  padding-left: 4rem;
-  margin: 0 0 0 30px;
-  color: white;
-
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    background: $timeline-body-bg;
+@media screen and (max-width: $mobile) {
+  .header-container {
+    padding: 0 1rem;
   }
 
-  .timeline-container {
-    position: relative;
-    margin-bottom: 2.5rem;
+  .btn-container-home {
+    flex-direction: column;
+    gap: 1rem;
 
-    .timeline-icon {
-      position: absolute;
-      left: -88px;
-      top: 4px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 2rem;
-      background: $primary;
-
-      i {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-      }
-    }
-
-    .timeline-body {
-      background: $timeline-body-bg;
-      border-radius: $timeline-body-round;
-      padding: 20px 20px 15px;
-      box-shadow: $timeline-body-shadow;
-
-      &:before {
-        content: "";
-        background: inherit;
-        width: 20px;
-        height: 20px;
-        display: block;
-        position: absolute;
-        left: -10px;
-        transform: rotate(45deg);
-        border-radius: 0 0 0 2px;
-      }
-
-      .timeline-title {
-        margin-bottom: 1.4rem;
-
-        .badge {
-          background: $pastel-dark;
-          padding: 4px 8px;
-          border-radius: 3px;
-          font-size: 12px;
-          font-weight: bold;
-        }
-      }
-      .timeline-intro {
-        color: $pastel-grey;
-        font-size: 20px;
-      }
-    }
-
-    // Primary Timeline
-    &.primary {
-      .badge,
-      .timeline-icon {
-        background: $primary !important;
-      }
+    a {
+      width: 100%;
+      max-width: 300px;
     }
   }
 }
@@ -616,7 +505,7 @@ main {
 
       &:hover {
         background-color: $light;
-        border-color: darken($bronze, 10%);
+        border-color: ($bronze, 10%);
       }
 
       &:focus {
@@ -689,5 +578,34 @@ main {
   .tool-card {
     margin: 0 auto;
     max-width: 350px;
+  }
+}
+
+/* ------------------ FOOTER ------------------ */
+
+.footer {
+  background-color: $matte-black;
+  padding: 10px 10px;
+  text-align: center;
+  font-family: "Alumni Sans", sans-serif;
+
+  &__brand {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 600px) {
+    &__links a {
+      display: block;
+      margin: 8px 0;
+    }
   }
 }

@@ -1,10 +1,108 @@
+// reset //
+
+$margin-reset: 0;
+$padding-reset: 0;
+$box-sizing-reset: border-box;
+$scroll-behavior-reset: smooth;
+// reset body //
+
+$FontFamily-body: "Montserrat", sans-serif;
+$h1-to-h6-font-family: "Alumni Sans", sans-serif;
+$h1-to-h6-font-weight: 500;
+
+// COLOR //
+
 $bronze: #907c64;
 $light: lightgrey;
 $matte-black: #28282b;
 $pastel-dark: #2c2c2c;
 $pastel-grey: white;
 
-/* ------------------ HEADER ------------------ */
+// BTN STYLE //
+
+$transition-btn: all 0.3s ease;
+$cursor-btn: pointer;
+
+// NAVIGATION //
+
+$nav-width: 100%;
+$nav-heigt: 80px;
+$nav-padding: 0 2rem;
+$nav-position: relative;
+$nav-z-index: 30;
+
+// nav-logo //
+
+$nav-logo-width: 20%;
+$nav-logo-height: auto;
+
+$nav-img-width: 25%;
+$nav-img-height: auto;
+$nav-img-objet-fit: contain;
+$nav-img-margin-top: 1px;
+$nav-img-border-radius: 30%;
+
+// BURGER MENU //
+
+$burger-position: absolute;
+$burger-top: 1rem;
+$burger-right: 1rem;
+$burger-width: 35px;
+$burger-heigt: 35px;
+$burger-z-index: 40;
+
+$burger-line-width: 100%;
+$burger-line-height: 3px;
+$burger-line-border-radius: 2px;
+$burger-line-position: absolute;
+$burger-line-transition: all 0.3s ease;
+
+// ------------------ HEADER1 ------------------ //
+$header-position: relative;
+$header-min-height: 100vh;
+$header-width: 100%;
+$header-padding: 4rem 0;
+
+// HEADER CONTAINER //
+
+$header-container-position: relative;
+$header-container-z-index: 2;
+$header-container-max-width: 1000px;
+$header-container-width: 100%;
+$header-container-padding: 0 2rem;
+$header-container-text-align: center;
+
+// HEADER H1 //
+
+$header-h1-font-size-clamp: clamp(2.5rem, 5vw, 4rem);
+$header-h1-font-weight: 400;
+$header-h1-margin-bottom: 2rem;
+$header-h1-letter-spacing: 2px;
+
+// HEADER H2 //
+
+$header-h2-font-size-clamp: clamp(1.2rem, 2.5vw, 1.8rem);
+$header-h2-font-weight: 300;
+$header-h2-line-height: 1.4;
+$header-h2-margin: 2rem auto;
+$header-h2-max-width: 800px;
+
+//---------------- BTN------------- //
+
+/* BTN CONTAINER HOME */
+$btn-container-home-gap: 2rem;
+$btn-container-home-margin-top: 3rem;
+
+// BTN CONTAINER HOME LINK //
+$btn-home-a-text-decoration: none;
+$btn-home-a-font-size: 1.1rem;
+$btn-home-a-min-width: 250px;
+$btn-home-a-padding: 0.5rem 0.5rem;
+$btn-home-a-text-align: center;
+$btn-home-a-transition: transform 0.3s ease, box-shadow 0.3s ease;
+$btn-home-a-transform: translateY(-3px);
+
+// ------------------ HEADER2 ------------------ //
 
 $container-max-width: 1200px;
 $padding-section: 4rem;
@@ -23,34 +121,6 @@ $transition-timing: ease;
 
 // Breakpoints
 $mobile: 780px;
-
-/* ------------------ DECOUVERTE ------------------ */
-$primary: #907c64;
-$secondary: #4f537b;
-
-// timeline variables
-
-$timeline-body-bg: grey;
-$timeline-body-round: 3px;
-$timeline-body-shadow: 1px 3px 9px rgba(0, 0, 0, 0.1);
-
-// typography Timeline
-
-$p-font-weight: 300;
-$p-line-height: 1.5;
-$p-font-size: 14px;
-$p-opacity: 0.8;
-$time-line-font-weight-h5: 200;
-
-// container
-
-$container-max-width: 650px;
-$container-margin: 50px auto;
-$container-margin-top: 5rem;
-
-// title-decouverte
-
-$-title-decouverte-margin-top: 5rem;
 
 // Outils
 
