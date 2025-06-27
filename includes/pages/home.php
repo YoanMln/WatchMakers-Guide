@@ -1,6 +1,8 @@
 <header>
     <div class="header-container">
-        
+        <div class="title-h1">
+            <h1>The Watchmaker's Guide </h1>
+        </div>
         <h2>Explorez la précision et la passion de l’horlogerie à travers un regard technique et authentique</h2>
         <div class="btn-container-home">
             <a href="index.php?pages=Decouverte">Découverte</a>
