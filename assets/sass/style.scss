@@ -107,7 +107,7 @@ nav {
   display: none;
 
   .ligne {
-    background: $light;
+    background: $matte-black;
     width: $burger-line-width;
     height: $burger-line-height;
     border-radius: $burger-line-border-radius;
@@ -306,7 +306,7 @@ $timeline-width: 700px;
   &__content {
     &-title {
       font-weight: normal;
-      font-size: 66px;
+      font-size: 50px;
       margin: -10px 0 0;
       padding: 0 10px;
       color: #fff;
@@ -314,8 +314,8 @@ $timeline-width: 700px;
     }
     &-desc {
       margin: 0;
-      font-size: 15px;
-      color: rgba(255, 255, 255, 0.7);
+      font-size: 20px;
+      color: white;
       line-height: 25px;
     }
   }
@@ -424,23 +424,15 @@ $timeline-width: 700px;
     }
 
     &__subtitle {
-      font-size: 16px;
-      font-weight: normal;
-      color: rgba(255, 255, 255, 0.5);
-      letter-spacing: 5px;
-      margin-top: 10px;
+      font-size: 20px;
+      font-weight: 500;
+      color: $light;
+      letter-spacing: 1.5px;
+      margin-top: 20px;
     }
   }
 }
 
-.demo-footer {
-  padding: 60px 0;
-  text-align: center;
-  a {
-    color: #999;
-    display: inline-block;
-  }
-}
 /* ------------------ OUTILS DE L'HORLOGER ------------------ */
 
 main {
