@@ -19,7 +19,6 @@
                 <img src="assets/images/logo/logo.webp" alt="logo du site The Watchmaker's Guide">
             </a>
         </div>
-        <h1 class="title">The Watchmaker's Guide </h1>
         <ul class="nav-menu">
             <li>
                 <a href="index.php?pages=home">Accueil</a>
