@@ -29,9 +29,7 @@
             <li>
                 <a href="index.php?pages=Techniques">Techniques</a>
             </li>
-            <li>
-                <a href="index.php?pages=Lexique">Lexique</a>
-            </li>
+
         </ul>
         <div class="nav-burger">
             <div class="ligne"></div>
