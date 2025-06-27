@@ -173,7 +173,7 @@ nav {
     display: block;
   }
   .nav-logo img {
-    display: none;
+    width: 100%;
   }
 }
 /* ------------------ HEADER ------------------ */
