@@ -1,6 +1,9 @@
 <?php
 $pages = $_GET['pages'] ?? 'home';
 
+require_once 'includes/SEOHelper.php';
+$seo = getSeoData($pages);
+
 include 'includes/header.php';
 
 switch ($pages) {
