@@ -1,9 +1,5 @@
 <article class="intro-temps">
-    <p>
-        Des premières civilisations au monde moderne, la mesure du temps a été essentielle pour organiser la vie sociale, religieuse et économique.
-        <br><br>
-        D'abord basée sur l’observation des astres, elle s’est peu à peu perfectionnée grâce à l’invention de moyens toujours plus précis pour se repérer dans le temps.
-    </p>
+
 
     <div id="timeline-1" class="timeline-container">
         <div class="timeline-header">
@@ -203,4 +199,3 @@
 
 
 </article>
-</main>

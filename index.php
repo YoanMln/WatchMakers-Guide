@@ -4,9 +4,6 @@ $pages = $_GET['pages'] ?? 'home';
 include 'includes/header.php';
 
 switch ($pages) {
-    case 'Decouverte':
-        include 'includes/pages/Decouverte.php';
-        break;
     case 'MesureDuTemps':
         include 'includes/pages/MesureDuTemps.php';
         break;
