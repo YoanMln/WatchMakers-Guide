@@ -1,6 +1,6 @@
 <main>
 
-    <h1>Techniques d'assemblage en horlogerie</h1>
+    <h1 class="title-pages">Techniques d'assemblage en horlogerie</h1>
 
     <?php
 
