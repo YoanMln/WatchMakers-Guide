@@ -18,9 +18,8 @@ Le site est composé de plusieurs pages à vocation informative et pédagogique 
 | Page                   | Description                                         |
 | ---------------------- | --------------------------------------------------- |
 | `Accueil`              | Introduction au site, menu burger responsive        |
-| `Découverte`           | Timeline brève de l’histoire de l’horlogerie suisse |
-| `Lexique`              | Termes clés et techniques de base de l'horlogerie   |
-| `Technique horlogere`  | Présentation des étapes de montage des montres      |
+| `Mesure du temps`      | Timeline brève de l’histoire de l’horlogerie suisse |
+| `Techniques`           | Présentation des étapes de montage des montres      |
 | `Outils de l'Horloger` | Aperçu des outils courants utilisés dans l’atelier  |
 
 ## ⚙️ Technologies utilisées
@@ -42,7 +41,6 @@ Le site est composé de plusieurs pages à vocation informative et pédagogique 
 
 - Ajouter des animations CSS ou scroll avec JS
 - Intégration d'une base de données en JSON pour enrichir le lexique et la page technique
-- Ajout d’un mode sombre en SCSS
 
 ## 🔗 Pourquoi ce projet ?
 
