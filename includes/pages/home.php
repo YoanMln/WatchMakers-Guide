@@ -5,7 +5,8 @@
         </div>
         <h2>Explorez la précision et la passion de l’horlogerie à travers un regard technique et authentique</h2>
         <div class="btn-container-home">
-            <a href="index.php?pages=Decouverte">Découverte</a>
+            <a href="index.php?pages=Decouverte">Histoire de l'horlogerie</a>
+            <a href="index.php?pages=MesureDuTemps">Histoire de la mesure du temps</a>
         </div>
     </div>
 </header>
