@@ -1,5 +1,5 @@
 <main>
-    <div class="title-outils">
+    <div class="title-pages">
         <h1>Les différents outils de l'artisan horloger</h1>
         <div class="intro-page">
             <h2>Découvrez les instruments essentiels du métier d’horloger, entre tradition et précision.</h2>
