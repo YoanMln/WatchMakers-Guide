@@ -19,9 +19,6 @@ switch ($pages) {
     case 'Techniques':
         include 'includes/pages/Techniques.php';
         break;
-    case 'Lexique':
-        include 'includes/pages/Lexique.php';
-        break;
     default:
         echo "<h2>Page introuvable</h2>";
         break;
