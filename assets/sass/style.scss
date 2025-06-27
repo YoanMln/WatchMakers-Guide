@@ -246,6 +246,18 @@ header h2 {
   text-shadow: 1px 1px 2px rgba($matte-black, 0.3);
 }
 
+.intro-container {
+  @include flexCenter;
+  width: $intro-container-width;
+  height: $intro-container-height;
+  border: $intro-container-border;
+  border-color: $bronze;
+  border-radius: $intro-container-border-radius;
+  margin: $intro-container-margin;
+
+  background-color: $intro-container-background-color;
+}
+
 .btn-container-home {
   @include flexCenter;
   gap: $btn-container-home-gap;
@@ -281,6 +293,13 @@ header h2 {
       width: 100%;
       max-width: 300px;
     }
+  }
+  .intro-container {
+    width: 90%;
+    max-width: 810px;
+    height: auto;
+    min-height: 100px;
+    padding: 1rem;
   }
 }
 
@@ -455,7 +474,7 @@ main {
   }
 }
 
-.title-outils {
+.title-pages {
   @include flexCenter;
   @include column;
   position: relative;
