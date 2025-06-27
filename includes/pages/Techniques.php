@@ -15,10 +15,10 @@
             <div class="list-choice">
                 <label for="element-choice">Choix de l'étape d'assemblage sur un mouvement 2824 </label><br>
                 <select name="techniques" id="element-choice" onchange="this.form.submit()">
-                    <option value="all" <?= ($selectedTechniques == 'all') ? 'selected' : '' ?>>Choix des étapes</option>
+
                     <option value="posage" <?= ($selectedTechniques == 'posage') ? 'selected' : '' ?>>Posage</option>
                     <option value="aiguillage" <?= ($selectedTechniques == 'aiguillage') ? 'selected' : '' ?>>Aiguillage</option>
-                    <option value="tolerance&controle" <?= ($selectedTechniques == 'tolerance&controle') ? 'selected' : '' ?>>Tolérance et contrôle</option>
+                    <option value="tolerance&controle" <?= ($selectedTechniques == 'tolerance&controle') ? 'selected' : '' ?>>Tolrance et contrôle</option>
                 </select>
             </div>
 

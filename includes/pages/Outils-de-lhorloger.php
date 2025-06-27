@@ -19,7 +19,6 @@
             <div class="list-choice">
                 <label for="element-choice">Choix du type d'outils </label><br>
                 <select name="outils" id="element-choice" onchange="this.form.submit()">
-                    <option value="all" <?= ($selectedOutils == 'all') ? 'selected' : '' ?>>Tous les outils</option>
                     <option value="assemblage" <?= ($selectedOutils == 'assemblage') ? 'selected' : '' ?>>Assemblage</option>
                     <option value="reglage&controle" <?= ($selectedOutils == 'reglage&controle') ? 'selected' : '' ?>>Réglage & Contrôle</option>
                     <option value="maintenance&entretien" <?= ($selectedOutils == 'maintenance&entretien') ? 'selected' : '' ?>>Maintenance & Entretien</option>
