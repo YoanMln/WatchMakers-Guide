@@ -3,11 +3,11 @@ function getSeoData($pages)
 {
     $seoData = [
         'home' => [
-            'title' => 'Accueil - À la découverte du temps | The Watchmakers Guide',
+            'title' => 'Accueil - À la découverte du temps | Watchmakers Guide',
             'description' => 'Explorez l’univers fascinant de l’horlogerie, de la mesure du temps aux techniques d’assemblage.',
         ],
         'MesureDuTemps' => [
-            'title' => 'Mesure du temps - Frise historique | The Watchmakers Guide',
+            'title' => 'Mesure du temps - Frise historique | Watchmakers Guide',
             'description' => 'Découvrez les grandes étapes de la mesure du temps à travers une frise chronologique interactive.',
         ],
         'Techniques' => [
@@ -21,7 +21,7 @@ function getSeoData($pages)
     ];
 
     return $seoData[$pages] ?? [
-        'title' => 'The Watchmakers Guide',
+        'title' => 'Watchmakers Guide',
         'description' => 'Le site pour explorer la passion du temps, des techniques et des outils horlogers.',
     ];
 }

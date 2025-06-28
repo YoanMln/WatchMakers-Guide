@@ -6,7 +6,7 @@
     <title><?= htmlspecialchars($seo['title']) ?></title>
     <meta name="description" content="<?= htmlspecialchars($seo['description']) ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Watchmaker's Guide </title>
+    <title>Watchmaker's Guide </title>
     <link rel="icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <?php if (file_exists("assets/css/{$pages}.css")) : ?>
@@ -20,7 +20,7 @@
     <nav>
         <div class="nav-logo">
             <a href="index.php?pages=home">
-                <img src="assets/images/logo/logo.webp" alt="logo du site The Watchmaker's Guide">
+                <img src="assets/images/logo/logo.webp" alt="logo du site Watchmaker's Guide">
             </a>
         </div>
         <ul class="nav-menu">
