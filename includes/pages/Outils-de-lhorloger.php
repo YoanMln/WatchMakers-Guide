@@ -14,7 +14,7 @@
     ?>
 
     <div class="container-select">
-        <form action="index.php?pages=outils-de-lhorloger" method="POST">
+        <form action="index.php?pages=Outils-de-lhorloger" method="POST">
 
             <div class="list-choice">
                 <label for="element-choice">Choix du type d'outils </label><br>
