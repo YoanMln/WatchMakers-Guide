@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #907c64;
+  color: #ad856f;
   font-family: "Alumni Sans", sans-serif;
   font-weight: 500;
 }
@@ -39,7 +39,7 @@ button {
   display: inline-block;
   min-width: 250px;
   height: 40px;
-  border: 1px solid #907c64;
+  border: 1px solid #ad856f;
   border-radius: 5px;
   margin: 1rem 0;
   transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -49,7 +49,7 @@ button {
 }
 
 button:hover {
-  background-color: #907c64;
+  background-color: #ad856f;
   color: lightgrey;
   box-shadow: 0 0 5px #2c2c2c;
 }
@@ -103,7 +103,7 @@ nav {
   text-transform: uppercase;
 }
 .nav-menu li a:hover {
-  color: #907c64;
+  color: #ad856f;
   text-decoration: underline;
 }
 
@@ -138,7 +138,7 @@ nav {
 .nav-burger.active .ligne:nth-child(1) {
   top: 18px;
   transform: rotate(45deg);
-  background: #907c64;
+  background: #ad856f;
 }
 .nav-burger.active .ligne:nth-child(2) {
   transform: translateX(-100px);
@@ -147,7 +147,7 @@ nav {
 .nav-burger.active .ligne:nth-child(3) {
   top: 18px;
   transform: rotate(-45deg);
-  background: #907c64;
+  background: #ad856f;
 }
 
 /* ------------------ RESPONSIVE ------------------ */
@@ -174,7 +174,7 @@ nav {
     margin: 2rem 0;
   }
   .nav-menu a {
-    color: #907c64 !important;
+    color: #ad856f !important;
     font-size: 1.5rem;
     font-weight: 500;
     transition: 0.2s;
@@ -233,7 +233,7 @@ header h1 {
 
 header h2 {
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  color: #907c64;
+  color: #ad856f;
   font-weight: 300;
   line-height: 1.4;
   margin: 2rem auto;
@@ -248,7 +248,7 @@ header h2 {
   width: 810px;
   height: 100px;
   border: 1px solid;
-  border-color: #907c64;
+  border-color: #ad856f;
   border-radius: 5px;
   margin: 2rem auto;
   background-color: rgba(40, 40, 43, 0.75);
@@ -277,7 +277,7 @@ header h2 {
   display: inline-block;
   min-width: 250px;
   height: 40px;
-  border: 1px solid #907c64;
+  border: 1px solid #ad856f;
   border-radius: 5px;
   margin: 1rem 0;
   transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -285,7 +285,7 @@ header h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .btn-container-home a:hover {
-  background-color: #907c64;
+  background-color: #ad856f;
   color: lightgrey;
   box-shadow: 0 0 5px #2c2c2c;
   transform: translateY(-3px);
@@ -496,7 +496,7 @@ main::before {
   width: 80%;
   padding: 0.8rem;
   border-radius: 8px;
-  border: 2px solid #907c64;
+  border: 2px solid #ad856f;
   background-color: rgba(211, 211, 211, 0.9);
   font-size: 1rem;
   cursor: pointer;
@@ -504,11 +504,11 @@ main::before {
 }
 .container-select .list-choice select:hover {
   background-color: lightgrey;
-  border-color: #907c64, 10%;
+  border-color: #ad856f, 10%;
 }
 .container-select .list-choice select:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(144, 124, 100, 0.3);
+  box-shadow: 0 0 0 2px rgba(173, 133, 111, 0.3);
 }
 
 .container-card {
@@ -524,7 +524,7 @@ main::before {
   margin: 0 auto;
 }
 .container-card .card {
-  background-color: rgba(211, 211, 211, 0.95);
+  background-color: rgba(0, 0, 0, 0.734);
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 8px 16px rgba(40, 40, 43, 0.1);
@@ -542,15 +542,18 @@ main::before {
   margin-bottom: 1.5rem;
 }
 .container-card .card h2 {
-  color: #907c64;
-  font-size: 1.4rem;
+  color: #ad856f;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 .container-card .card p {
-  color: #28282b;
+  color: lightgrey;
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 500;
+}
+.container-card .card li {
+  color: lightgrey;
 }
 
 @media screen and (max-width: 780px) {

@@ -541,7 +541,7 @@ main {
   }
 
   .card {
-    background-color: rgba($light, 0.95);
+    background-color: $background-card;
     border-radius: 1rem;
     padding: 1.5rem;
     box-shadow: 0 8px 16px rgba($matte-black, 0.1);
@@ -562,15 +562,19 @@ main {
 
     h2 {
       color: $bronze;
-      font-size: 1.4rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
 
     p {
-      color: $matte-black;
+      color: $light;
       font-size: 1rem;
       line-height: 1.6;
       font-weight: 500;
+    }
+
+    li {
+      color: $light;
     }
   }
 }
