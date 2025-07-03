@@ -61,8 +61,8 @@
                     $use = isset($tool['Utilisation']) ? $tool['Utilisation'] : 'Utilisation non précisée.';
 
                     echo '<article class="card">';
-                    echo '<h2>' . htmlspecialchars($name) . '</h2>';
                     echo "<img src='assets/images/img-outils/" . htmlspecialchars($image) . "' alt='" . htmlspecialchars($name) . "' class='card-image'>";
+                    echo '<h2>' . htmlspecialchars($name) . '</h2>';
                     echo '<p>' . htmlspecialchars($use) . '</p>';
                     echo '</article>';
                 }
