@@ -18,7 +18,7 @@
 
                     <option value="posage" <?= ($selectedTechniques == 'posage') ? 'selected' : '' ?>>Posage</option>
                     <option value="aiguillage" <?= ($selectedTechniques == 'aiguillage') ? 'selected' : '' ?>>Aiguillage</option>
-                    <option value="tolerance&controle" <?= ($selectedTechniques == 'tolerance&controle') ? 'selected' : '' ?>>Tolrance et contrôle</option>
+                    <option value="tolerance&controle" <?= ($selectedTechniques == 'tolerance&controle') ? 'selected' : '' ?>>Tolérance et contrôle</option>
                 </select>
             </div>
 
