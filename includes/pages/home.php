@@ -9,5 +9,18 @@
         <div class="btn-container-home">
             <a href="index.php?pages=MesureDuTemps">Histoire de la mesure du temps</a>
         </div>
+        <div class="nav-home">
+            <ul class="nav-home-list">
+                <li>
+                    <a href="index.php?pages=home">Accueil</a>
+                </li>
+                <li>
+                    <a href="index.php?pages=Outils-de-lhorloger">Outils de l'horloger</a>
+                </li>
+                <li>
+                    <a href="index.php?pages=Techniques">Techniques</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </header>
