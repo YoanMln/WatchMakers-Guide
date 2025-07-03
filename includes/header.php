@@ -1,3 +1,14 @@
+<?php
+function isHomePage()
+{
+    $uri = $_SERVER['REQUEST_URI'];
+    return str_contains($uri, 'pages=home');
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,8 +27,7 @@
 </head>
 
 <body>
-
-    <nav>
+    <nav class="<?= isHomePage() ? 'hide' : '' ?>">
         <div class="nav-logo">
             <a href="index.php?pages=home">
                 <img src="assets/images/logo/logo.webp" alt="logo du site Watchmaker's Guide">
