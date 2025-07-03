@@ -107,6 +107,10 @@ nav {
   text-decoration: underline;
 }
 
+.hide {
+  display: none;
+}
+
 /* BURGER MENU */
 .nav-burger {
   position: absolute;
@@ -216,9 +220,10 @@ header::before {
   z-index: 2;
   max-width: 1000px;
   width: 100%;
-  padding: 0 2rem;
+  padding: 5rem;
   color: lightgrey;
   text-align: center;
+  background-color: rgba(17, 17, 17, 0.6666666667);
 }
 
 header h1 {
@@ -247,11 +252,7 @@ header h2 {
   align-items: center;
   width: 810px;
   height: 100px;
-  border: 1px solid;
-  border-color: #ad856f;
-  border-radius: 5px;
   margin: 2rem auto;
-  background-color: rgba(40, 40, 43, 0.75);
 }
 
 .btn-container-home {
@@ -266,7 +267,7 @@ header h2 {
   text-decoration: none;
   font-size: 1.1rem;
   min-width: 250px;
-  padding: 0.5rem 0.5rem;
+  padding: 1.5rem 5rem;
   text-align: center;
   outline: none;
   border: none;
@@ -291,6 +292,27 @@ header h2 {
   transform: translateY(-3px);
 }
 
+.nav-home-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+}
+.nav-home-list a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #ad856f;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+.nav-home-list a:hover {
+  color: lightgrey;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 780px) {
   .header-container {
     padding: 0 1rem;
@@ -309,6 +331,11 @@ header h2 {
     height: auto;
     min-height: 100px;
     padding: 1rem;
+  }
+  .nav-home .nav-home-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }
 /* ------------------ MESURE DU TEMPS ------------------ */
@@ -483,34 +510,84 @@ main::before {
   width: 100%;
   max-width: 600px;
   margin: 2rem auto;
+  padding: 0 1.5rem;
+  margin-top: 5rem;
 }
 .container-select .list-choice {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 .container-select .list-choice label {
-  color: white;
+  color: lightgrey;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(40, 40, 43, 0.5);
+}
+.container-select .list-choice .select-wrapper {
+  position: relative;
+  width: 100%;
+}
+.container-select .list-choice .select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ad856f;
+  pointer-events: none;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+.container-select .list-choice .select-wrapper:hover::after {
+  transform: translateY(-50%) rotate(180deg);
 }
 .container-select .list-choice select {
-  width: 80%;
-  padding: 0.8rem;
-  border-radius: 8px;
-  border: 2px solid #ad856f;
-  background-color: rgba(211, 211, 211, 0.9);
-  font-size: 1rem;
+  appearance: none;
+  width: 100%;
+  padding: 1rem 2.5rem 1rem 1rem;
+  border: 1px solid #ad856f;
+  border-radius: 2px;
+  background-color: rgba(40, 40, 43, 0.9);
+  color: lightgrey;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.container-select .list-choice select option {
+  background-color: rgba(40, 40, 43, 0.95);
+  color: lightgrey;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.container-select .list-choice select option:hover {
+  background-color: #ad856f;
+}
 .container-select .list-choice select:hover {
-  background-color: lightgrey;
-  border-color: #ad856f, 10%;
+  background-color: rgba(40, 40, 43, 0.95);
+  border-color: rgb(191.5044247788, 160.5309734513, 143.4955752212);
+  box-shadow: 0 0 15px rgba(173, 133, 111, 0.3);
 }
 .container-select .list-choice select:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(173, 133, 111, 0.3);
+  border-color: rgb(200.7566371681, 174.296460177, 159.7433628319);
+  box-shadow: 0 0 0 3px rgba(173, 133, 111, 0.4);
 }
 
+@media screen and (max-width: 780px) {
+  .container-select {
+    padding: 0 1rem;
+  }
+  .container-select .list-choice label {
+    font-size: 1.1rem;
+  }
+  .container-select .list-choice select {
+    font-size: 1rem;
+    padding: 0.8rem 2rem 0.8rem 0.8rem;
+  }
+}
 .container-card {
   position: relative;
   z-index: 2;

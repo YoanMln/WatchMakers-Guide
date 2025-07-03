@@ -94,6 +94,9 @@ nav {
     }
   }
 }
+.hide {
+  display: none;
+}
 
 /* BURGER MENU */
 .nav-burger {
@@ -224,6 +227,8 @@ header {
   padding: $header-container-padding;
   color: $light;
   text-align: $header-container-text-align;
+
+  background-color: #111111aa;
 }
 
 header h1 {
@@ -250,12 +255,7 @@ header h2 {
   @include flexCenter;
   width: $intro-container-width;
   height: $intro-container-height;
-  border: $intro-container-border;
-  border-color: $bronze;
-  border-radius: $intro-container-border-radius;
   margin: $intro-container-margin;
-
-  background-color: $intro-container-background-color;
 }
 
 .btn-container-home {
@@ -280,6 +280,27 @@ header h2 {
   }
 }
 
+.nav-home-list {
+  @include flexCenter;
+  list-style: none;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: $bronze;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $light;
+      text-decoration: underline;
+    }
+  }
+}
+
 @media screen and (max-width: $mobile) {
   .header-container {
     padding: 0 1rem;
@@ -300,6 +321,14 @@ header h2 {
     height: auto;
     min-height: 100px;
     padding: 1rem;
+  }
+
+  .nav-home {
+    .nav-home-list {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
   }
 }
 
@@ -496,32 +525,92 @@ main {
   width: 100%;
   max-width: 600px;
   margin: 2rem auto;
+  padding: 0 1.5rem;
+  margin-top: 5rem;
 
   .list-choice {
     @include flexCenter;
+    flex-direction: column;
+    text-align: center;
 
     label {
-      color: $pastel-grey;
+      color: $light;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-shadow: 1px 1px 2px rgba($matte-black, 0.5);
+    }
+
+    .select-wrapper {
+      position: relative;
+      width: 100%;
+
+      &::after {
+        content: "▼";
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $bronze;
+        pointer-events: none;
+        font-size: 0.8rem;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
     }
 
     select {
-      width: 80%;
-      padding: 0.8rem;
-      border-radius: 8px;
-      border: 2px solid $bronze;
-      background-color: rgba($light, 0.9);
-      font-size: 1rem;
+      appearance: none;
+      width: 100%;
+      padding: 1rem 2.5rem 1rem 1rem;
+      border: 1px solid $bronze;
+      border-radius: 2px;
+      background-color: rgba($matte-black, 0.9);
+      color: $light;
+      font-size: 1.1rem;
       cursor: pointer;
       transition: all 0.3s ease;
 
+      option {
+        background-color: rgba($matte-black, 0.95);
+        color: $light;
+        padding: 1rem;
+        font-size: 1rem;
+
+        &:hover {
+          background-color: $bronze;
+        }
+      }
+
       &:hover {
-        background-color: $light;
-        border-color: ($bronze, 10%);
+        background-color: rgba($matte-black, 0.95);
+        border-color: lighten($bronze, 10%);
+        box-shadow: 0 0 15px rgba($bronze, 0.3);
       }
 
       &:focus {
         outline: none;
-        box-shadow: 0 0 0 2px rgba($bronze, 0.3);
+        border-color: lighten($bronze, 15%);
+        box-shadow: 0 0 0 3px rgba($bronze, 0.4);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .container-select {
+    padding: 0 1rem;
+
+    .list-choice {
+      label {
+        font-size: 1.1rem;
+      }
+
+      select {
+        font-size: 1rem;
+        padding: 0.8rem 2rem 0.8rem 0.8rem;
       }
     }
   }
