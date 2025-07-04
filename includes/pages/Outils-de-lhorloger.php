@@ -1,4 +1,4 @@
-<main>
+<main class="tools-page">
     <div class="title-pages">
         <h1>Les différents outils de l'artisan horloger</h1>
         <div class="intro-page">
