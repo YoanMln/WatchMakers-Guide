@@ -49,7 +49,8 @@ nav {
   padding: $nav-padding;
   position: $nav-position;
   z-index: $nav-z-index;
-  background-color: $light;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
 }
 
 .nav-logo {
@@ -357,7 +358,7 @@ $timeline-width: 700px;
       font-size: 50px;
       margin: -10px 0 0;
       padding: 0 10px;
-      color: #fff;
+      color: $bronze;
       transition: 0.4s;
     }
     &-desc {
@@ -375,7 +376,7 @@ $timeline-width: 700px;
     width: 2px;
     height: 100%;
     margin-left: -1px;
-    background: rgba(255, 255, 255, 0.1);
+    background: $bronze;
     @include responsive() {
       left: 40px;
     }
@@ -487,9 +488,23 @@ main {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background: url("../images/img/main-outils.webp") center/cover no-repeat;
-
   padding: 2rem 0;
+
+  &.tools-page {
+    background: url("../images/img/main-outils.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  &.techniques-page {
+    background: url("../images/img/main-techniques.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 
   &::before {
     content: "";
@@ -545,11 +560,6 @@ main {
       width: 100%;
 
       &::after {
-        content: "▼";
-        position: absolute;
-        right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
         color: $bronze;
         pointer-events: none;
         font-size: 0.8rem;
@@ -586,13 +596,13 @@ main {
 
       &:hover {
         background-color: rgba($matte-black, 0.95);
-        border-color: lighten($bronze, 10%);
+        border-color: $bronze;
         box-shadow: 0 0 15px rgba($bronze, 0.3);
       }
 
       &:focus {
         outline: none;
-        border-color: lighten($bronze, 15%);
+
         box-shadow: 0 0 0 3px rgba($bronze, 0.4);
       }
     }
@@ -688,7 +698,7 @@ main {
 /* ------------------ FOOTER ------------------ */
 
 .footer {
-  background-color: $matte-black;
+  background-color: #f6f6f6;
   padding: 10px 10px;
   text-align: center;
   font-family: "Alumni Sans", sans-serif;
