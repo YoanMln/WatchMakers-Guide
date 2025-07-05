@@ -1,12 +1,13 @@
 <?php
 function isHomePage()
 {
-    $uri = $_SERVER['REQUEST_URI'];
-    return str_contains($uri, 'pages=home');
+
+    if (!isset($_GET['pages']) || $_GET['pages'] === 'home') {
+        return true;
+    }
+    return false;
 }
-
 ?>
-
 
 
 <!DOCTYPE html>
