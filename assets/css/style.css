@@ -110,6 +110,13 @@ nav {
 .hide {
   display: none;
 }
+@media screen and (max-width: 780px) {
+  .hide {
+    display: flex;
+    width: 100%;
+    background-color: lightgrey;
+  }
+}
 
 /* BURGER MENU */
 .nav-burger {
@@ -311,10 +318,22 @@ header h2 {
   color: lightgrey;
   text-decoration: underline;
 }
+@media screen and (max-width: 780px) {
+  .nav-home-list {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 780px) {
   .header-container {
     padding: 0 1rem;
+  }
+  header h2 {
+    max-width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: 1.4;
+    margin: 1rem auto;
   }
   .btn-container-home {
     flex-direction: column;
@@ -323,12 +342,12 @@ header h2 {
   .btn-container-home a {
     width: 100%;
     max-width: 300px;
+    padding: 0.5rem;
   }
   .intro-container {
-    width: 90%;
-    max-width: 810px;
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    min-height: 100px;
     padding: 1rem;
   }
   .nav-home .nav-home-list {
