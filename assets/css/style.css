@@ -14,7 +14,19 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: white;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+body[data-page=home] {
+  background: url("../images/img/bg-home.webp") center/cover fixed no-repeat;
+}
+body[data-page=Outils-de-lhorloger] {
+  background: url("../images/img/main-outils.webp") center/cover fixed no-repeat;
+}
+body[data-page=Techniques] {
+  background: url("../images/img/main-techniques.webp") center/cover fixed no-repeat;
 }
 
 h1,
@@ -64,8 +76,8 @@ nav {
   padding: 0 2rem;
   position: relative;
   z-index: 30;
-  background-color: transparent;
-  backdrop-filter: blur(5px);
+  background-color: rgba(40, 40, 43, 0.6);
+  backdrop-filter: blur(3px);
 }
 
 .nav-logo {
@@ -96,7 +108,7 @@ nav {
 .nav-menu li a {
   text-decoration: none;
   font-size: 25px;
-  color: #28282b;
+  color: lightgrey;
   font-weight: 300;
   transition: color 0.3s ease;
   font-family: "Alumni Sans", sans-serif;
@@ -235,7 +247,7 @@ header::before {
 
 header h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 400;
+  font-weight: 200;
   margin-bottom: 2rem;
   color: lightgrey;
   text-transform: uppercase;
@@ -493,20 +505,6 @@ main {
   width: 100%;
   padding: 2rem 0;
 }
-main.tools-page {
-  background: url("../images/img/main-outils.webp");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-main.techniques-page {
-  background: url("../images/img/main-techniques.webp");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
 main::before {
   content: "";
   position: absolute;
@@ -533,6 +531,7 @@ main::before {
   margin-top: 1rem;
   font-size: 2rem;
   text-shadow: 2px 2px 4px rgba(40, 40, 43, 0.5);
+  font-weight: 300;
 }
 
 .container-select {
@@ -672,21 +671,27 @@ main::before {
 }
 /* ------------------ FOOTER ------------------ */
 .footer {
-  background-color: #f6f6f6;
+  background-color: rgba(40, 40, 43, 0.6);
   padding: 10px 10px;
   text-align: center;
+  color: lightgrey;
+  backdrop-filter: blur(3px);
   font-family: "Alumni Sans", sans-serif;
 }
-.footer__brand {
+.footer__name {
   font-size: 30px;
-  color: #fff;
+  color: #ad856f;
   margin-bottom: 10px;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 300;
 }
 .footer__text {
   font-size: 20px;
   margin-bottom: 15px;
+}
+.footer__text a {
+  text-decoration: underline;
+  color: #ad856f;
 }
 @media (max-width: 600px) {
   .footer__links a {

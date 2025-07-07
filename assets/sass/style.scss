@@ -15,7 +15,23 @@
 
 body {
   font-family: $FontFamily-body;
-  background-color: $pastel-grey;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  &[data-page="home"] {
+    background: url("../images/img/bg-home.webp") center/cover fixed no-repeat;
+  }
+
+  &[data-page="Outils-de-lhorloger"] {
+    background: url("../images/img/main-outils.webp") center/cover fixed
+      no-repeat;
+  }
+  &[data-page="Techniques"] {
+    background: url("../images/img/main-techniques.webp") center/cover fixed
+      no-repeat;
+  }
 }
 
 h1,
@@ -49,8 +65,8 @@ nav {
   padding: $nav-padding;
   position: $nav-position;
   z-index: $nav-z-index;
-  background-color: transparent;
-  backdrop-filter: blur(5px);
+  background-color: rgba($matte-black, 0.6);
+  backdrop-filter: blur(3px);
 }
 
 .nav-logo {
@@ -82,7 +98,7 @@ nav {
     a {
       text-decoration: none;
       font-size: 25px;
-      color: $matte-black;
+      color: $light;
       font-weight: 300;
       transition: color 0.3s ease;
       font-family: "Alumni Sans", sans-serif;
@@ -508,22 +524,6 @@ main {
   width: 100%;
   padding: 2rem 0;
 
-  &.tools-page {
-    background: url("../images/img/main-outils.webp");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-
-  &.techniques-page {
-    background: url("../images/img/main-techniques.webp");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -549,6 +549,7 @@ main {
     margin-top: 1rem;
     font-size: 2rem;
     text-shadow: 2px 2px 4px rgba($matte-black, 0.5);
+    font-weight: 300;
   }
 }
 
@@ -716,22 +717,29 @@ main {
 /* ------------------ FOOTER ------------------ */
 
 .footer {
-  background-color: #f6f6f6;
+  background-color: rgba($matte-black, 0.6);
   padding: 10px 10px;
   text-align: center;
+  color: $light;
+  backdrop-filter: blur(3px);
   font-family: "Alumni Sans", sans-serif;
 
-  &__brand {
+  &__name {
     font-size: 30px;
-    color: #fff;
+    color: $bronze;
     margin-bottom: 10px;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 300;
   }
 
   &__text {
     font-size: 20px;
     margin-bottom: 15px;
+
+    & a {
+      text-decoration: underline;
+      color: $bronze;
+    }
   }
 
   @media (max-width: 600px) {
