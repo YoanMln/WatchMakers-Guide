@@ -27,7 +27,7 @@ function isHomePage()
     <?php endif; ?>
 </head>
 
-<body>
+<body data-page="<?= $pages ?>">
     <nav class="<?= isHomePage() ? 'hide' : '' ?>">
         <div class="nav-logo">
             <a href="index.php?pages=home">
