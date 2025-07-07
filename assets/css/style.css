@@ -126,7 +126,8 @@ nav {
   .hide {
     display: flex;
     width: 100%;
-    background-color: lightgrey;
+    background-color: rgba(40, 40, 43, 0.6);
+    backdrop-filter: blur(3px);
   }
 }
 
@@ -142,7 +143,7 @@ nav {
   display: none;
 }
 .nav-burger .ligne {
-  background: #28282b;
+  background: lightgrey;
   width: 100%;
   height: 3px;
   border-radius: 2px;

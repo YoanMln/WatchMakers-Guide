@@ -116,7 +116,8 @@ nav {
   @media screen and (max-width: 780px) {
     display: flex;
     width: 100%;
-    background-color: $light;
+    background-color: rgba($matte-black, 0.6);
+    backdrop-filter: blur(3px);
   }
 }
 
@@ -132,7 +133,7 @@ nav {
   display: none;
 
   .ligne {
-    background: $matte-black;
+    background: $light;
     width: $burger-line-width;
     height: $burger-line-height;
     border-radius: $burger-line-border-radius;
