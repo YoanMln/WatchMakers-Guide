@@ -30,6 +30,9 @@ body[data-page=Outils-de-lhorloger] {
 body[data-page=Techniques] {
   background: url("../images/img/main-techniques.webp") center/cover fixed no-repeat;
 }
+body[data-page=MesureDuTemps] {
+  background-color: #141615;
+}
 
 h1,
 h2,
@@ -297,18 +300,26 @@ header h2 {
   background-color: #111;
 }
 .timeline__content-title {
-  font-weight: normal;
-  font-size: 50px;
+  font-weight: 300;
+  font-size: 45px;
   margin: -10px 0 0;
   padding: 0 10px;
   color: #ad856f;
   transition: 0.4s;
 }
+.timeline__content-date {
+  margin: 0;
+  color: white;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 30px;
+}
 .timeline__content-desc {
   margin: 0;
   font-size: 20px;
+  font-weight: 300;
   color: white;
-  line-height: 25px;
+  line-height: 27px;
 }
 .timeline:before {
   content: "";

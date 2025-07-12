@@ -35,6 +35,9 @@ body {
     background: url("../images/img/main-techniques.webp") center/cover fixed
       no-repeat;
   }
+  &[data-page="MesureDuTemps"] {
+    background-color: $black-background;
+  }
 }
 
 h1,
@@ -297,19 +300,28 @@ $timeline-width: 700px;
 
   &__content {
     &-title {
-      font-weight: normal;
-      font-size: 50px;
+      font-weight: 300;
+      font-size: 45px;
       margin: -10px 0 0;
       padding: 0 10px;
       color: $bronze;
       transition: 0.4s;
     }
 
+    &-date {
+      margin: 0;
+      color: white;
+      font-size: 27px;
+      font-weight: 300;
+      line-height: 30px;
+    }
+
     &-desc {
       margin: 0;
       font-size: 20px;
+      font-weight: 300;
       color: white;
-      line-height: 25px;
+      line-height: 27px;
     }
   }
 
@@ -605,7 +617,7 @@ main {
 @media screen and (max-width: 780px) {
   nav,
   .footer {
-    background-color: #141615;
+    background-color: $black-background;
   }
   .nav-menu {
     @include flexCenter;
@@ -680,7 +692,7 @@ main {
 
   .tools-page,
   .techniques-page {
-    background-color: #141615;
+    background-color: $black-background;
   }
 }
 
