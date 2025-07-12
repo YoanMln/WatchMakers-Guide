@@ -5,7 +5,6 @@
 
     </div>
 </footer>
-
 <script src="script/burger.js"></script>
 </body>
 
