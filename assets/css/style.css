@@ -721,6 +721,13 @@ main::before {
     padding: 0.8rem 2rem 0.8rem 0.8rem;
     width: 100%;
   }
+  .timeline-header__title {
+    font-weight: 300;
+  }
+  .timeline-header__subtitle {
+    margin: 1rem;
+    line-height: 25px;
+  }
   .timeline:before {
     left: 40px;
   }
