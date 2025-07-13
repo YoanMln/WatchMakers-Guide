@@ -61,7 +61,7 @@
                     // Si détails -> tableau = liste 
 
                     if (is_array($details)) {
-                        echo '<ul>';
+                        echo '<ul class="list-custom">';
                         foreach ($details as $desc) {
                             echo '<li>' . htmlspecialchars($desc) . '</li>';
                         }
