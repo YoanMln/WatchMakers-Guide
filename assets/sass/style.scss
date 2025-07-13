@@ -107,7 +107,7 @@ nav {
       text-decoration: none;
       font-size: 25px;
       color: $light;
-      font-weight: 300;
+      font-weight: $font-weight300;
       transition: color 0.3s ease;
       font-family: "Alumni Sans", sans-serif;
       text-transform: uppercase;
@@ -301,7 +301,7 @@ $timeline-width: 700px;
 
   &__content {
     &-title {
-      font-weight: 300;
+      font-weight: $font-weight300;
       font-size: 45px;
       margin: -10px 0 0;
       padding: 0 10px;
@@ -313,14 +313,14 @@ $timeline-width: 700px;
       margin: 0;
       color: white;
       font-size: 27px;
-      font-weight: 300;
+      font-weight: $font-weight300;
       line-height: 30px;
     }
 
     &-desc {
       margin: 0;
       font-size: 20px;
-      font-weight: 300;
+      font-weight: $font-weight300;
       color: white;
       line-height: 27px;
     }
@@ -447,6 +447,7 @@ main {
   position: relative;
   z-index: 2;
   margin: $margin-top-h1 0 2rem;
+  font-weight: $font-weight300;
 
   h2 {
     color: $light;
@@ -454,7 +455,7 @@ main {
     margin-top: 1rem;
     font-size: 2rem;
     text-shadow: 2px 2px 4px rgba($matte-black, 0.5);
-    font-weight: 300;
+    font-weight: $font-weight300;
   }
 }
 
@@ -569,15 +570,16 @@ main {
 
     h2 {
       color: $bronze;
-      font-size: 2rem;
+      font-size: 1.7rem;
       margin-bottom: 1rem;
+      font-weight: $font-weight300;
     }
 
     p {
       color: $light;
       font-size: 1rem;
       line-height: 1.6;
-      font-weight: 500;
+      font-weight: $font-weight300;
     }
 
     li {
@@ -625,7 +627,7 @@ main {
     color: $bronze;
     margin-bottom: 10px;
     letter-spacing: 1px;
-    font-weight: 300;
+    font-weight: $font-weight300;
   }
 
   &__text {
@@ -759,7 +761,7 @@ main {
     h1,
     h2 {
       font-size: 30px;
-      font-weight: 300;
+      font-weight: $font-weight300;
     }
   }
 
@@ -767,7 +769,7 @@ main {
     h1 {
       text-align: center;
       font-size: 30px;
-      font-weight: 300;
+      font-weight: $font-weight300;
     }
   }
 
@@ -788,7 +790,7 @@ main {
   }
 
   .timeline-header__title {
-    font-weight: 300;
+    font-weight: $font-weight300;
   }
 
   .timeline-header__subtitle {
