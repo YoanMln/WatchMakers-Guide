@@ -135,7 +135,7 @@
                     <img class="timeline__img" src="assets/images/mesure-du-temps/invention-echappement.webp" alt="invention échappement" />
                     <h2 class="timeline__content-title">L'échappement</h2>
                     <h3 class="timeline__content-date">XVIIIème siècle</h3>
-                    <p class="timeline__content-desc">George Grahan invente le mécanisme à encre encore utilisé sur de nombreuses horloges du XIXème siècle.</p>
+                    <p class="timeline__content-desc">George Grahan invente le mécanisme à ancre encore utilisé sur de nombreuses horloges du XIXème siècle.</p>
                 </div>
             </div>
             <div class="timeline-item" data-text="Histoire de la mesure du temps">
