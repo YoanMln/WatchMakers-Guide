@@ -10,6 +10,9 @@ switch ($pages) {
     case 'MesureDuTemps':
         include 'includes/pages/MesureDuTemps.php';
         break;
+    case 'Fonctionnement';
+        include 'includes/pages/Fonctionnement.php';
+        break;
     case 'home':
         include 'includes/pages/home.php';
         break;
