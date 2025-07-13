@@ -200,6 +200,7 @@ header::before {
   color: lightgrey;
   text-align: center;
   background-color: rgba(17, 17, 17, 0.6666666667);
+  border-radius: 5px;
 }
 
 header h1 {
@@ -632,12 +633,6 @@ main::before {
   .nav-home-list {
     display: none;
   }
-  .container-select {
-    padding: 0 1rem;
-  }
-  .container-select .list-choice select {
-    width: 100%;
-  }
   .tool-card {
     margin: 0 auto;
     max-width: 350px;
@@ -646,17 +641,15 @@ main::before {
   .techniques-page {
     background-color: #141615;
   }
-}
-@media screen and (max-width: 780px) {
   .header-container {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
   .title-h1 {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
   header h2 {
     max-width: 100%;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     text-align: center;
     line-height: 1.4;
     margin: 1rem auto;
@@ -681,6 +674,19 @@ main::before {
     align-items: center;
     gap: 1rem;
   }
+  .title-pages {
+    margin: 0.5rem;
+  }
+  .title-pages h1,
+  .title-pages h2 {
+    font-size: 30px;
+    font-weight: 300;
+  }
+  .techniques-page h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+  }
   .container-select {
     padding: 0 1rem;
   }
@@ -690,6 +696,7 @@ main::before {
   .container-select .list-choice select {
     font-size: 1rem;
     padding: 0.8rem 2rem 0.8rem 0.8rem;
+    width: 100%;
   }
   .timeline:before {
     left: 40px;

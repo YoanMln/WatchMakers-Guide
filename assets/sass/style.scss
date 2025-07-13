@@ -207,6 +207,7 @@ header {
   color: $light;
   text-align: $header-container-text-align;
   background-color: #111111aa;
+  border-radius: 5px;
 }
 
 header h1 {
@@ -619,6 +620,7 @@ main {
   .footer {
     background-color: $black-background;
   }
+
   .nav-menu {
     @include flexCenter;
     flex-direction: column;
@@ -675,16 +677,6 @@ main {
     display: none;
   }
 
-  .container-select {
-    padding: 0 1rem;
-
-    .list-choice {
-      select {
-        width: 100%;
-      }
-    }
-  }
-
   .tool-card {
     margin: 0 auto;
     max-width: 350px;
@@ -694,20 +686,18 @@ main {
   .techniques-page {
     background-color: $black-background;
   }
-}
 
-@media screen and (max-width: $mobile) {
   .header-container {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 
   .title-h1 {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   header h2 {
     max-width: 100%;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     text-align: center;
     line-height: 1.4;
     margin: 1rem auto;
@@ -739,6 +729,23 @@ main {
     }
   }
 
+  .title-pages {
+    margin: 0.5rem;
+    h1,
+    h2 {
+      font-size: 30px;
+      font-weight: 300;
+    }
+  }
+
+  .techniques-page {
+    h1 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 300;
+    }
+  }
+
   .container-select {
     padding: 0 1rem;
 
@@ -750,6 +757,7 @@ main {
       select {
         font-size: 1rem;
         padding: 0.8rem 2rem 0.8rem 0.8rem;
+        width: 100%;
       }
     }
   }
