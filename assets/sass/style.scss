@@ -585,6 +585,31 @@ main {
     }
   }
 }
+.list-custom {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+
+  li {
+    margin-bottom: 0.1rem;
+    padding: 0.5rem 0;
+    position: relative;
+    color: $light;
+    line-height: 1.5;
+
+    &:before {
+      content: "•";
+      color: $bronze;
+      font-weight: bold;
+      position: absolute;
+      left: -1rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 
 /* ------------------ FOOTER ------------------ */
 .footer {
