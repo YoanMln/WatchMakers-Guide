@@ -33,7 +33,7 @@
         <div class="card-fonctionnement">
             <div class="accumulation-content">
                 <h2 class="card-title">Accumulation</h2>
-                <p>L'accumulateur d'énergie d'une montre mécanique est le ressort
+                <p class="resume-details">L'accumulateur d'énergie d'une montre mécanique est le ressort
                     contenu dans le barillet.
                     l'énergie est stockée dans le ressort du barillet.
                     En remontant la montre, le ressort s'enroule autour de l'axe. En se
@@ -47,7 +47,7 @@
         <div class="card-fonctionnement">
             <div class="accumulation-content">
                 <h2 class="card-title">Transmission et comptage</h2>
-                <p>Le rouage transmet l’énergie du barillet à l’échappement.
+                <p class="resume-details">Le rouage transmet l’énergie du barillet à l’échappement.
                     Chaque rouage est dimensionné pour respecter la fréquence du
                     balancier, afin d’assurer une rotation régulière et précise des
                     roues.</p>
@@ -59,7 +59,7 @@
         <div class="card-fonctionnement">
             <div class="accumulation-content">
                 <h2 class="card-title">Distribution</h2>
-                <p>La distribution est assurée par la roue d’échappement, l’ancre et la
+                <p class="resume-details">La distribution est assurée par la roue d’échappement, l’ancre et la
                     cheville du plateau.
                     Ce système entretient les oscillations du balancier en libérant
                     l’énergie de façon rythmée.</p>
@@ -71,7 +71,7 @@
         <div class="card-fonctionnement">
             <div class="accumulation-content">
                 <h2 class="card-title">Régulation</h2>
-                <p>Assurée par le balancier-spiral. celui-ci va rythmer la rotation du
+                <p class="resume-details">Assurée par le balancier-spiral. celui-ci va rythmer la rotation du
                     rouage de manière très précise et ainsi réguler la distribution de
                     l’énergie</p>
             </div>
@@ -82,7 +82,7 @@
         <div class="card-fonctionnement">
             <div class="accumulation-content">
                 <h2 class="card-title">Affichage</h2>
-                <p>Celui-ci est assuré par les aiguilles et le cadran.</p>
+                <p class="resume-details">Celui-ci est assuré par les aiguilles et le cadran.</p>
             </div>
             <div class="schema-fonctionnement">
                 <img class="watch-parts" src="assets/images/fonctionnement/parts/affichage.webp" alt="barillet d'une montre mécanique">
