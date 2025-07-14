@@ -33,6 +33,9 @@ body[data-page=Techniques] {
 body[data-page=MesureDuTemps] {
   background-color: #141615;
 }
+body[data-page=Fonctionnement] {
+  background-color: #141615;
+}
 
 h1,
 h2,
@@ -408,6 +411,7 @@ header h2 {
 /* ------------------ FONCTIONNEMENT ------------------ */
 .fonctionnement {
   background-color: #141615;
+  padding: 2rem 0;
 }
 
 .container-title {
@@ -430,7 +434,10 @@ header h2 {
   border: 1px solid;
   border-color: #ad856f;
   border-radius: 5px;
-  margin: 1rem 10rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 1rem auto 0;
+  padding: 2rem;
 }
 .card-watch-parts h2 {
   text-align: center;
@@ -467,7 +474,10 @@ header h2 {
   border: 1px solid;
   border-color: #ad856f;
   border-radius: 5px;
-  margin: 1rem 10rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 1rem auto 0;
+  padding: 2rem;
 }
 .fonctionnement-details .title-details {
   text-align: center;
@@ -491,7 +501,7 @@ header h2 {
   margin-bottom: 1rem;
   color: #ad856f;
 }
-.fonctionnement-details .card-fonctionnement .accumulation-content p {
+.fonctionnement-details .card-fonctionnement .resume-details {
   color: lightgrey;
   text-align: left;
   line-height: 1.6;
@@ -740,13 +750,13 @@ main::before {
   .nav-menu li {
     margin: 2rem 0;
   }
-  .nav-menu a {
+  .nav-menu li a {
     color: #ad856f !important;
     font-size: 1.5rem;
     font-weight: 500;
     transition: 0.2s;
   }
-  .nav-menu a:hover {
+  .nav-menu li a:hover {
     color: white !important;
   }
   .title {
@@ -766,14 +776,6 @@ main::before {
   }
   .nav-home-list {
     display: none;
-  }
-  .tool-card {
-    margin: 0 auto;
-    max-width: 350px;
-  }
-  .tools-page,
-  .techniques-page {
-    background-color: #141615;
   }
   .header-container {
     padding: 0 2rem;
@@ -832,6 +834,14 @@ main::before {
     padding: 0.8rem 2rem 0.8rem 0.8rem;
     width: 100%;
   }
+  .tool-card {
+    margin: 0 auto;
+    max-width: 350px;
+  }
+  .tools-page,
+  .techniques-page {
+    background-color: #141615;
+  }
   .timeline-header__title {
     font-weight: 300;
   }
@@ -868,55 +878,101 @@ main::before {
   .title-mecanique {
     font-size: 1.8rem;
     margin: 1rem 0;
+    text-align: center;
   }
   .intro {
     font-size: 1rem;
     line-height: 1.5;
     margin: 1rem 0;
+    max-width: 90%;
+    margin: 1rem auto;
   }
   .card-watch-parts {
-    margin: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
   }
   .card-watch-parts h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    text-align: center;
   }
   .card-watch-parts .intro-card {
     font-size: 1rem;
     margin-bottom: 1.5rem;
+    text-align: center;
   }
   .card-watch-parts .details {
     flex-direction: column;
     margin-top: 2rem;
-    gap: 2rem;
+    gap: 1rem;
   }
   .card-watch-parts .details .details-list {
     order: 2;
+    gap: 2rem;
   }
   .card-watch-parts .details .details-list li {
     margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(40, 40, 43, 0.3);
+    border-radius: 8px;
+    border-left: 3px solid #ad856f;
   }
   .card-watch-parts .details .details-list li p {
     max-width: 100%;
     max-height: none;
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
     font-size: 0.9rem;
+    line-height: 1.5;
   }
   .card-watch-parts .details .schema-parts {
-    order: 1;
     text-align: center;
     margin-bottom: 1rem;
   }
   .card-watch-parts .details .schema-parts .watch-parts {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
   }
   .fonctionnement-details {
-    margin: 0;
+    padding: 1rem;
+  }
+  .fonctionnement-details .title-details {
+    font-size: 1.8rem;
+    margin: 2rem 0 1.5rem;
+    text-align: center;
   }
   .fonctionnement-details .card-fonctionnement {
-    margin: 1rem;
+    flex-direction: column;
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  .fonctionnement-details .card-fonctionnement .accumulation-content {
+    max-width: 100%;
+  }
+  .fonctionnement-details .card-fonctionnement .accumulation-content .card-title {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #ad856f;
+  }
+  .fonctionnement-details .card-fonctionnement .resume-details {
+    color: lightgrey !important;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+    max-width: 65ch;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .fonctionnement-details .card-fonctionnement .schema-fonctionnement {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .fonctionnement-details .card-fonctionnement .schema-fonctionnement .watch-parts {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
   }
 }
 @media (max-width: 600px) {
