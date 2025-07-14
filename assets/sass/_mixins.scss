@@ -40,3 +40,15 @@
   left: -50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin card-construct {
+  border: 1px solid;
+  border-color: $bronze;
+  border-radius: 5px;
+  margin: 1rem 10rem;
+}
+
+@mixin img-construct {
+  width: 200px;
+  border-radius: 5px;
+}
