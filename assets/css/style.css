@@ -491,6 +491,7 @@ header h2 {
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
+  background-color: rgba(0, 0, 0, 0.448);
 }
 .fonctionnement-details .card-fonctionnement .accumulation-content {
   flex: 1;
