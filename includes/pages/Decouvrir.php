@@ -2,7 +2,7 @@
     <div class="header-container-discovery">
 
         <div class="discovery-intro">
-            <h1>Découvrir l'horlogerie</h1>
+            <h1>Découvrir l’univers de l’horlogerie</h1>
             <p>Choisissez votre parcours d'apprentissage</p>
         </div>
 

@@ -7,7 +7,7 @@
             <h2>Explorez la précision et la passion de l’horlogerie à travers un regard technique et authentique</h2>
         </div>
         <div class="btn-container-home">
-            <a href="index.php?pages=Decouvrir">Découvrir</a>
+            <a href="index.php?pages=Decouvrir">Découvrir l'horlogerie</a>
         </div>
         <div class="nav-home">
             <ul class="nav-home-list">
