@@ -28,6 +28,38 @@
   cursor: pointer;
 }
 
+@mixin btn-discovery {
+  text-decoration: none;
+  color: $light;
+  border: 1px solid $bronze;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  min-width: 150px;
+  max-width: 200px;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  &:hover:not(.btn-disabled) {
+    background-color: $bronze;
+    color: $matte-black;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba($bronze, 0.3);
+  }
+
+  &.btn-disabled {
+    background-color: rgba($light, 0.1);
+    color: rgba($light, 0.5);
+    border-color: rgba($light, 0.2);
+    cursor: not-allowed;
+
+    &:hover {
+      transform: none;
+      background-color: rgba($light, 0.1);
+      box-shadow: none;
+    }
+  }
+}
+
 @mixin btnStyleHover {
   background-color: $bronze;
   color: $light;
