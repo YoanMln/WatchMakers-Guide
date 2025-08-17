@@ -6,6 +6,12 @@ function getSeoData($pages)
             'title' => 'Accueil - À la découverte du temps | Watchmakers Guide',
             'description' => 'Explorez l’univers fascinant de l’horlogerie, de la mesure du temps aux techniques d’assemblage.',
         ],
+
+        'Decouvrir' => [
+            'title' => 'Portail de découverte | Watchmakers Guide',
+            'description' => 'Portail vers la découverte du monde horloger'
+        ],
+
         'MesureDuTemps' => [
             'title' => 'Mesure du temps - Frise historique | Watchmakers Guide',
             'description' => 'Découvrez les grandes étapes de la mesure du temps à travers une frise chronologique interactive.',

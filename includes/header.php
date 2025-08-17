@@ -39,6 +39,9 @@ function isHomePage()
                 <a href="index.php?pages=home">Accueil</a>
             </li>
             <li>
+                <a href="index.php?pages=Decouvrir">Découvrir</a>
+            </li>
+            <li>
                 <a href="index.php?pages=Fonctionnement">Fonctionnement</a>
             </li>
             <li>
