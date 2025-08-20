@@ -13,6 +13,9 @@ switch ($pages) {
     case 'MesureDuTemps':
         include 'includes/pages/MesureDuTemps.php';
         break;
+    case 'Quiz interactif';
+        include 'includes/pages/Quiz.php';
+        break;
     case 'Fonctionnement';
         include 'includes/pages/Fonctionnement.php';
         break;
