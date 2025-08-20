@@ -148,3 +148,36 @@ function chooseDifficulty(level) {
   activeQuestions = StorageQuestions.filter((q) => q.difficulty === level);
   displayQuestion();
 }
+
+// AFFICHAGE DU QUIZ //
+
+function displayQuestion() {
+  document.getElementById("difficulty").innerHTML = "";
+  const question = activeQuestions[currentQuestion];
+
+  // Afficher la progression
+
+  const displayedQuestion = currentQuestion + 1;
+  const totalQuestions = activeQuestions.length;
+  document.getElementById(
+    "progression"
+  ).textContent = `Question ${displayedQuestion}/${totalQuestions}`;
+
+  // Afficher question //
+
+  document.getElementById("question").textContent = question.question;
+
+  // Container btn //
+
+  const buttonContainer = document.getElementById("answers");
+  buttonContainer.innerHTML = "";
+
+  // Creation btn de réponses //
+
+  for (let i = 0; i < question.answers.length; i++) {
+    const button = document.createElement("button");
+    button.textContent = question.answers[i];
+    button.onclick = () => checkAnswer(i);
+    buttonContainer.appendChild(button);
+  }
+}
