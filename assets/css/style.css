@@ -51,7 +51,11 @@ h5,
 h6 {
   color: #ad856f;
   font-family: "Alumni Sans", sans-serif;
-  font-weight: 500;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 /* ------------------ BOUTONS ------------------ */
@@ -316,7 +320,6 @@ header h2 {
 
 .discovery-intro h1 {
   color: #ad856f;
-  font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
 }
 .discovery-intro p {
@@ -501,13 +504,11 @@ header h2 {
 }
 .timeline-header__title {
   font-size: 46px;
-  font-weight: normal;
-  color: #fff;
   margin: 0;
 }
 .timeline-header__subtitle {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 300;
   color: lightgrey;
   letter-spacing: 1.5px;
   margin-top: 20px;
@@ -750,13 +751,17 @@ header h2 {
 }
 
 /* ------------------ OUTILS DE L'HORLOGER ------------------ */
-main {
+main,
+.techniques-page,
+.tools-page {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem 0 0 0;
 }
-main::before {
+main::before,
+.techniques-page::before,
+.tools-page::before {
   content: "";
   position: absolute;
   top: 0;
@@ -776,6 +781,7 @@ main::before {
   z-index: 2;
   margin: 1rem 0 2rem;
   font-weight: 300;
+  font-size: 2rem;
 }
 .title-pages h2 {
   color: lightgrey;
@@ -805,7 +811,7 @@ main::before {
 .container-select .list-choice label {
   color: lightgrey;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 300;
   text-shadow: 1px 1px 2px rgba(40, 40, 43, 0.5);
 }
 .container-select .list-choice .select-wrapper {
@@ -931,6 +937,8 @@ main::before {
   color: lightgrey;
   backdrop-filter: blur(3px);
   font-family: "Alumni Sans", sans-serif;
+  position: relative;
+  z-index: 10;
 }
 .footer__name {
   font-size: 30px;
@@ -1040,7 +1048,7 @@ main::before {
   }
   .title-pages h1,
   .title-pages h2 {
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 300;
   }
   .techniques-page h1 {

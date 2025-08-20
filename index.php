@@ -7,7 +7,7 @@ $seo = getSeoData($pages);
 include 'includes/header.php';
 
 switch ($pages) {
-    case 'Decouvrir';
+    case 'Decouvrir':
         include 'includes/pages/Decouvrir.php';
         break;
     case 'MesureDuTemps':
@@ -16,7 +16,7 @@ switch ($pages) {
     case 'Quiz';
         include 'includes/pages/Quiz.php';
         break;
-    case 'Fonctionnement';
+    case 'Fonctionnement':
         include 'includes/pages/Fonctionnement.php';
         break;
     case 'home':
