@@ -181,3 +181,41 @@ function displayQuestion() {
     buttonContainer.appendChild(button);
   }
 }
+
+//  LOGIQUE DE JEU //
+
+function checkAnswer(selectedIndex) {
+  const question = activeQuestions[currentQuestion];
+
+  if (selectedIndex === question.correctAnswer) {
+    currentScore++;
+    alert("Bonne réponse!");
+  } else {
+    alert(
+      "Mauvaise réponse! La bonne réponse était : " +
+        question.answers[question.correctAnswer]
+    );
+  }
+
+  // Question suivante //
+
+  currentQuestion++;
+
+  if (currentQuestion < activeQuestions.length) {
+    displayQuestion();
+  } else {
+    // Fin du quiz //
+    document.getElementById("answers").innerHTML = "";
+    document.getElementById("question").textContent = "";
+    document.getElementById(
+      "results"
+    ).textContent = `Quiz terminé ! Votre score : ${currentScore}/${activeQuestions.length}`;
+
+    const retryContainer = document.getElementById("retry");
+    retryContainer.innerHTML = "";
+    const retryBtn = document.createElement("button");
+    retryBtn.textContent = "Recommencer";
+    retryBtn.onclick = retryGame;
+    retryContainer.appendChild(retryBtn);
+  }
+}
