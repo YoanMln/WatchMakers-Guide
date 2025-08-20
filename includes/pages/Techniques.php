@@ -1,4 +1,4 @@
-<main class="techniques-page">
+<article class="techniques-page">
     <h1 class="title-pages">Techniques d'assemblage en horlogerie</h1>
 
     <?php
@@ -30,13 +30,13 @@
 
             $jsonFile = '';
             switch ($selectedTechniques) {
-                case 'posage';
+                case 'posage':
                     $jsonFile = './data/posage.json';
                     break;
-                case 'aiguillage';
+                case 'aiguillage':
                     $jsonFile = './data/aiguillage.json';
                     break;
-                case 'tolerance&controle';
+                case 'tolerance&controle':
                     $jsonFile = './data/tolerance&controle.json';
                     break;
                 default:
@@ -84,4 +84,4 @@
 
 
     </section>
-</main>
+    </main>
