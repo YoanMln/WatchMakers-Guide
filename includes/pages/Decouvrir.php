@@ -1,4 +1,4 @@
-<header>
+<main class="discovery-page">
     <div class="header-container-discovery">
 
         <div class="discovery-intro">
@@ -30,4 +30,4 @@
             </div>
         </div>
     </div>
-</header>
+</main>

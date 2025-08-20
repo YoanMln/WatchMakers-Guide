@@ -60,6 +60,25 @@
   }
 }
 
+@mixin btn-quiz {
+  text-decoration: none;
+  color: $light;
+  border: 1px solid $bronze;
+  border-radius: 5px;
+  background: rgba($matte-black, 0.55);
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+
 @mixin btnStyleHover {
   background-color: $bronze;
   color: $light;

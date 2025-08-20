@@ -130,17 +130,20 @@ let currentScore = 0; // score du joueur //
 let currentQuestion = 0; // index question actuelle
 let activeQuestions = []; // filtrage question selon la difficulté
 let selectedDifficulty = null; // niveau de difficulté sélectionné
+let resultMessage = "";
 
 //  SÉLECTION DIFFICULTÉ //
 
 function showDifficultySelection(level) {
   const difficultyContainer = document.getElementById("difficulty");
   difficultyContainer.innerHTML = `
-    <h2> Choissisez le niveau de difficulté : </h2>
-    <button onclick="chooseDifficulty('novice')">Novice</button>
-      <button onclick="chooseDifficulty('horloger')">Horloger</button>
-      <button onclick="chooseDifficulty('maitre horloger')">Maître horloger</button>
-    `;
+    <h2 class="sub-text"> Choissisez le niveau de difficulté : </h2>
+      <div class = "container-btn-difficulty"> 
+    <button class="btn-quiz" onclick="chooseDifficulty('novice')">Novice</button>
+      <button class="btn-quiz" onclick="chooseDifficulty('horloger')">Horloger</button>
+      <button class="btn-quiz" onclick="chooseDifficulty('maitre horloger')">Maître horloger</button>
+    </div>
+      `;
 }
 
 function chooseDifficulty(level) {
@@ -176,6 +179,7 @@ function displayQuestion() {
 
   for (let i = 0; i < question.answers.length; i++) {
     const button = document.createElement("button");
+    button.className = "btn-quiz";
     button.textContent = question.answers[i];
     button.onclick = () => checkAnswer(i);
     buttonContainer.appendChild(button);
@@ -185,19 +189,46 @@ function displayQuestion() {
 //  LOGIQUE DE JEU //
 
 function checkAnswer(selectedIndex) {
+  const answersBox = document.getElementById("answers"); // empeche le double clic
+  answersBox.style.pointerEvents = "none";
   const question = activeQuestions[currentQuestion];
 
   if (selectedIndex === question.correctAnswer) {
     currentScore++;
-    alert("Bonne réponse!");
+    resultMessage = "Bonne réponse!";
   } else {
-    alert(
+    resultMessage =
       "Mauvaise réponse! La bonne réponse était : " +
-        question.answers[question.correctAnswer]
-    );
+      question.answers[question.correctAnswer];
   }
 
+  showAlert(resultMessage);
+
   // Question suivante //
+}
+
+// GESTION DE REDÉMARRAGE //
+function retryGame() {
+  currentScore = 0;
+  currentQuestion = 0;
+  document.getElementById("results").textContent = "";
+  document.getElementById("retry").innerHTML = "";
+  document.getElementById("progression").innerHTML = "";
+  showDifficultySelection();
+}
+
+showDifficultySelection();
+
+function showAlert(message) {
+  document.getElementById("custom-alert-message").textContent = message;
+  document.getElementById("custom-alert").classList.remove("hidden");
+}
+
+function closeAlert() {
+  document.getElementById("custom-alert").classList.add("hidden");
+
+  const answersBox = document.getElementById("answers");
+  answersBox.style.pointerEvents = "auto";
 
   currentQuestion++;
 
@@ -214,20 +245,9 @@ function checkAnswer(selectedIndex) {
     const retryContainer = document.getElementById("retry");
     retryContainer.innerHTML = "";
     const retryBtn = document.createElement("button");
+    retryBtn.className = "btn-retry";
     retryBtn.textContent = "Recommencer";
     retryBtn.onclick = retryGame;
     retryContainer.appendChild(retryBtn);
   }
 }
-
-// GESTION DE REDÉMARRAGE //
-function retryGame() {
-  currentScore = 0;
-  currentQuestion = 0;
-  document.getElementById("results").textContent = "";
-  document.getElementById("retry").innerHTML = "";
-  document.getElementById("progression").innerHTML = "";
-  showDifficultySelection();
-}
-
-showDifficultySelection();
