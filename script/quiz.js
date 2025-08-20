@@ -130,3 +130,21 @@ let currentScore = 0; // score du joueur //
 let currentQuestion = 0; // index question actuelle
 let activeQuestions = []; // filtrage question selon la difficulté
 let selectedDifficulty = null; // niveau de difficulté sélectionné
+
+//  SÉLECTION DIFFICULTÉ //
+
+function showDifficultySelection(level) {
+  const difficultyContainer = document.getElementById("difficulty");
+  difficultyContainer.innerHTML = `
+    <h2> Choissisez le niveau de difficulté : </h2>
+    <button onclick="chooseDifficulty('novice')">Novice</button>
+      <button onclick="chooseDifficulty('horloger')">Horloger</button>
+      <button onclick="chooseDifficulty('maitre horloger')">Maître horloger</button>
+    `;
+}
+
+function chooseDifficulty(level) {
+  selectedDifficulty = level;
+  activeQuestions = StorageQuestions.filter((q) => q.difficulty === level);
+  displayQuestion();
+}
