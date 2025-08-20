@@ -1044,7 +1044,7 @@ main::before,
     gap: 1rem;
   }
   .title-pages {
-    margin: 0.5rem;
+    margin: 0.5rem auto;
   }
   .title-pages h1,
   .title-pages h2 {
