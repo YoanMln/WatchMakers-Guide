@@ -16,6 +16,12 @@ function getSeoData($pages)
             'title' => 'Mesure du temps - Frise historique | Watchmakers Guide',
             'description' => 'Découvrez les grandes étapes de la mesure du temps à travers une frise chronologique interactive.',
         ],
+
+        'Quiz interactif' => [
+            'title' => 'Quiz interactif | Watchmakers Guide',
+            'description' => 'Testez vos connaissances en horlogerie avec un quiz au niveau adaptatif',
+        ],
+
         'Techniques' => [
             'title' => 'Techniques horlogères - Posage et Emboîtage',
             'description' => 'Plongez dans les gestes techniques de l’horlogerie avec des visuels détaillés du posage et de l’emboîtage.',
