@@ -1,4 +1,5 @@
 <header>
+    <header class="header-container"></header>
     <h1>Quiz interactif</h1>
 
     <div class="container">

@@ -17,7 +17,7 @@ function getSeoData($pages)
             'description' => 'Découvrez les grandes étapes de la mesure du temps à travers une frise chronologique interactive.',
         ],
 
-        'Quiz interactif' => [
+        'Quiz' => [
             'title' => 'Quiz interactif | Watchmakers Guide',
             'description' => 'Testez vos connaissances en horlogerie avec un quiz au niveau adaptatif',
         ],
