@@ -219,3 +219,15 @@ function checkAnswer(selectedIndex) {
     retryContainer.appendChild(retryBtn);
   }
 }
+
+// GESTION DE REDÉMARRAGE //
+function retryGame() {
+  currentScore = 0;
+  currentQuestion = 0;
+  document.getElementById("results").textContent = "";
+  document.getElementById("retry").innerHTML = "";
+  document.getElementById("progression").innerHTML = "";
+  showDifficultySelection();
+}
+
+showDifficultySelection();
