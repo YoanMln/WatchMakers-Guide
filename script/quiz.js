@@ -123,3 +123,10 @@ const StorageQuestions = [
     difficulty: "maitre horloger",
   },
 ];
+
+/////////////////////////////////////////////////////////////////////////
+
+let currentScore = 0; // score du joueur //
+let currentQuestion = 0; // index question actuelle
+let activeQuestions = []; // filtrage question selon la difficulté
+let selectedDifficulty = null; // niveau de difficulté sélectionné
