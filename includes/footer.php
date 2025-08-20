@@ -5,7 +5,7 @@
 
     </div>
 </footer>
-<script src="scritp/quiz.js"></script>
+<script src="script/quiz.js"></script>
 <script src="script/burger.js"></script>
 </body>
 
