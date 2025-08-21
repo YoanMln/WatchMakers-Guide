@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="gate complication-gate coming-soon">
-                <h2>Les grandes complications</h2>
+                <h2>Les complications</h2>
                 <p class="gate-description">Explorez les mécanismes les plus complexes</p>
                 <div class="gate-action">
                     <a class="gate-btn btn-disabled" href="#">Prochainement...</a>
