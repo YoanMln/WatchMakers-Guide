@@ -43,6 +43,11 @@ body[data-page=Fonctionnement] {
   background-color: #141615;
 }
 
+body[data-page=MesureDuTemps] nav {
+  position: fixed;
+  backdrop-filter: blur(1px);
+}
+
 h1,
 h2,
 h3,
@@ -93,7 +98,7 @@ nav {
   padding: 0 2rem;
   position: relative;
   z-index: 30;
-  background-color: rgba(40, 40, 43, 0.6);
+  background-color: rgba(40, 40, 43, 0.95);
   backdrop-filter: blur(3px);
 }
 
@@ -931,7 +936,7 @@ main::before,
 
 /* ------------------ FOOTER ------------------ */
 .footer {
-  background-color: rgba(40, 40, 43, 0.6);
+  background-color: rgba(40, 40, 43, 0.95);
   padding: 10px 10px;
   text-align: center;
   color: lightgrey;

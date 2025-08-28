@@ -51,6 +51,11 @@ body {
   }
 }
 
+body[data-page="MesureDuTemps"] nav {
+  position: fixed;
+  backdrop-filter: blur(1px);
+}
+
 h1,
 h2,
 h3,
@@ -85,7 +90,7 @@ nav {
   padding: $nav-padding;
   position: $nav-position;
   z-index: $nav-z-index;
-  background-color: rgba($matte-black, 0.6);
+  background-color: rgba($matte-black, 0.95);
   backdrop-filter: blur(3px);
 }
 
@@ -902,7 +907,7 @@ main,
 
 /* ------------------ FOOTER ------------------ */
 .footer {
-  background-color: rgba($matte-black, 0.6);
+  background-color: rgba($matte-black, 0.95);
   padding: 10px 10px;
   text-align: center;
   color: $light;
