@@ -51,15 +51,6 @@ body {
   }
 }
 
-body[data-page="MesureDuTemps"] nav {
-  position: fixed;
-  backdrop-filter: blur(1px);
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: top 1s ease-in-out;
-}
-
 h1,
 h2,
 h3,
@@ -92,10 +83,15 @@ nav {
   @include flexCenter;
   justify-content: space-between;
   padding: $nav-padding;
-  position: $nav-position;
+
   z-index: $nav-z-index;
   background-color: rgba($matte-black, 0.95);
   backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 1s ease-in-out;
 }
 
 .nav-logo {
