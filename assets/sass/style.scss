@@ -54,6 +54,10 @@ body {
 body[data-page="MesureDuTemps"] nav {
   position: fixed;
   backdrop-filter: blur(1px);
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 1s ease-in-out;
 }
 
 h1,
