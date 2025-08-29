@@ -41,6 +41,8 @@ Le site est composé de plusieurs pages à vocation informative et pédagogique 
 
 - Ajouter des animations CSS ou scroll avec JS
 - Intégration d'une base de données en JSON pour enrichir le lexique et la page technique
+- Ajout d’une section « Découverte », pensée comme un portail interactif regroupant différents contenus pédagogiques.
+  Elle inclut notamment un Quiz en JavaScript, avec niveaux de difficulté modulables, permettant de tester ses connaissances de manière ludique. (29/08/2025)
 
 ## 🔗 Pourquoi ce projet ?
 
