@@ -57,3 +57,7 @@ Ce projet a une **valeur personnelle et professionnelle forte**. En tant qu'anci
 **Auteur :** Yoan  
 **Date :** Juin 2025  
 **Formation :** Concepteur Développeur d'Applications – Campus Numérique d'Annecy
+
+## 📄 Licence
+
+GNU AGPL v3.0
