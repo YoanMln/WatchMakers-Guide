@@ -2,6 +2,10 @@
 
 Ce projet est un **site web éducatif** autour de l'**horlogerie suisse**, réalisé dans le cadre de ma formation au développement web. Il me permet de mettre en pratique mes apprentissages en **PHP**, **SCSS** et **JavaScript**, tout en créant un lien fort avec mon **ancienne activité dans l'industrie horlogère**. Il représente pour moi un pont symbolique et technique entre deux univers.
 
+## 📷 Aperçu du projet
+
+![WatchMakers Guide](assets/images/screenGitHub/watchmakers.webp)
+
 ## 🎯 Objectifs pédagogiques
 
 - Mettre en œuvre l’architecture **Front Controller** en PHP.
