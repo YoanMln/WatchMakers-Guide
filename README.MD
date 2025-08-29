@@ -18,7 +18,7 @@ Le site est composé de plusieurs pages à vocation informative et pédagogique 
 | Page                   | Description                                         |
 | ---------------------- | --------------------------------------------------- |
 | `Accueil`              | Introduction au site, menu burger responsive        |
-| `Mesure du temps`      | Timeline brève de l’histoire de l’horlogerie suisse |
+| `Découverte`           | Portail interactif avec redirection vers un quiz... |
 | `Techniques`           | Présentation des étapes de montage des montres      |
 | `Outils de l'Horloger` | Aperçu des outils courants utilisés dans l’atelier  |
 
