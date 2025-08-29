@@ -43,11 +43,6 @@ body[data-page=Fonctionnement] {
   background-color: #141615;
 }
 
-body[data-page=MesureDuTemps] nav {
-  position: fixed;
-  backdrop-filter: blur(1px);
-}
-
 h1,
 h2,
 h3,
@@ -96,10 +91,14 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  position: relative;
   z-index: 30;
   background-color: rgba(40, 40, 43, 0.95);
   backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 1s ease-in-out;
 }
 
 .nav-logo {
@@ -974,6 +973,7 @@ main::before,
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    min-height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -984,6 +984,9 @@ main::before,
   }
   .nav-menu.active {
     transform: translateX(0);
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
   }
   .nav-menu li {
     margin: 2rem 0;
