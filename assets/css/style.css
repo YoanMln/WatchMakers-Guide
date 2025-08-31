@@ -20,9 +20,11 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
+  padding-top: 50px;
 }
 body[data-page=home] {
   background: url("../images/img/bg-home.webp") center/cover fixed no-repeat;
+  padding-top: 0;
 }
 body[data-page=Outils-de-lhorloger] {
   background: url("../images/img/main-outils.webp") center/cover fixed no-repeat;
@@ -108,7 +110,7 @@ nav {
   align-items: center;
 }
 .nav-logo img {
-  width: 25%;
+  width: 20%;
   height: auto;
   object-fit: contain;
   margin-top: 1px;
@@ -226,7 +228,6 @@ header h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 200;
   margin-bottom: 2rem;
-  color: lightgrey;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(40, 40, 43, 0.5);
@@ -234,7 +235,7 @@ header h1 {
 
 header h2 {
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  color: #ad856f;
+  color: lightgrey;
   font-weight: 300;
   line-height: 1.4;
   margin: 2rem auto;
@@ -323,7 +324,6 @@ header h2 {
 }
 
 .discovery-intro h1 {
-  color: #ad856f;
   margin-bottom: 1rem;
 }
 .discovery-intro p {
@@ -516,6 +516,87 @@ header h2 {
   color: lightgrey;
   letter-spacing: 1.5px;
   margin-top: 20px;
+}
+
+/* -------------------COMPLICATIONS --------------------*/
+.header-container-complications {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: rgba(40, 40, 43, 0.9);
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.complications-intro {
+  text-align: center;
+}
+.complications-intro .title-section {
+  color: #ad856f;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(40, 40, 43, 0.7);
+  font-weight: 300;
+}
+
+.container-cards {
+  max-width: 100%;
+}
+
+.complications-cards {
+  border: 1px solid;
+  border-color: #ad856f;
+  border-radius: 5px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 1rem auto 0;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.complication-title {
+  font-size: 2.5rem;
+  color: #ad856f;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.complication-text {
+  color: lightgrey;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 3rem;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-viewer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.viewer {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  border: 2px solid #ad856f;
+  border-radius: 12px;
+  position: relative;
+  background: #141615;
+  box-shadow: 0 8px 32px rgba(173, 133, 111, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.viewer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(173, 133, 111, 0.25);
 }
 
 /* ------------------ QUIZ -----------------------------*/
@@ -1271,6 +1352,33 @@ main::before,
   .gate.coming-soon .gate-btn:hover {
     transform: none !important;
     background-color: rgba(211, 211, 211, 0.05) !important;
+  }
+  .header-container-complications {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+  }
+  .complications-intro {
+    margin-bottom: 3rem;
+  }
+  .complications-intro .title-section {
+    font-size: 2.5rem;
+  }
+  .complications-cards {
+    padding: 2rem 1.5rem;
+  }
+  .complication-title {
+    font-size: 2rem;
+  }
+  .complication-text {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.6;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .viewer {
+    height: 300px;
+    max-width: 100%;
   }
 }
 @media (max-width: 480px) {

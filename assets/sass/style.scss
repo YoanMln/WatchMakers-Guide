@@ -21,9 +21,11 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
+  padding-top: 50px;
 
   &[data-page="home"] {
     background: url("../images/img/bg-home.webp") center/cover fixed no-repeat;
+    padding-top: 0;
   }
 
   &[data-page="Outils-de-lhorloger"] {
@@ -50,7 +52,6 @@ body {
     background-color: $black-background;
   }
 }
-
 h1,
 h2,
 h3,
@@ -234,7 +235,6 @@ header h1 {
   font-size: $header-h1-font-size-clamp;
   font-weight: $header-h1-font-weight;
   margin-bottom: $header-h1-margin-bottom;
-  color: $light;
   text-transform: uppercase;
   letter-spacing: $header-h1-letter-spacing;
   text-shadow: 2px 2px 4px rgba($matte-black, 0.5);
@@ -242,7 +242,7 @@ header h1 {
 
 header h2 {
   font-size: $header-h2-font-size-clamp;
-  color: $bronze;
+  color: $light;
   font-weight: $header-h2-font-weight;
   line-height: $header-h2-line-height;
   margin: $header-h2-margin;
@@ -315,8 +315,6 @@ header h2 {
 }
 .discovery-intro {
   h1 {
-    color: $bronze;
-
     margin-bottom: 1rem;
   }
   p {
@@ -507,6 +505,84 @@ $timeline-width: 700px;
       letter-spacing: 1.5px;
       margin-top: 20px;
     }
+  }
+}
+
+/* -------------------COMPLICATIONS --------------------*/
+
+.header-container-complications {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: rgba($matte-black, 0.9);
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.complications-intro {
+  text-align: center;
+
+  .title-section {
+    color: $bronze;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba($matte-black, 0.7);
+    font-weight: 300;
+  }
+}
+
+.container-cards {
+  max-width: 100%;
+}
+
+.complications-cards {
+  @include card-construct;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.complication-title {
+  font-size: 2.5rem;
+  color: $bronze;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.complication-text {
+  color: $light;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 3rem;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-viewer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.viewer {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  border: 2px solid $bronze;
+  border-radius: 12px;
+  position: relative;
+  background: $black-background;
+  box-shadow: 0 8px 32px rgba($bronze, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba($bronze, 0.25);
   }
 }
 
@@ -1325,6 +1401,39 @@ main,
         }
       }
     }
+  }
+  .header-container-complications {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .complications-intro {
+    margin-bottom: 3rem;
+
+    .title-section {
+      font-size: 2.5rem;
+    }
+  }
+
+  .complications-cards {
+    padding: 2rem 1.5rem;
+  }
+
+  .complication-title {
+    font-size: 2rem;
+  }
+
+  .complication-text {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.6;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .viewer {
+    height: 300px;
+    max-width: 100%;
   }
 }
 
