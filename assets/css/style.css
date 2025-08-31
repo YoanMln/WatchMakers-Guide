@@ -806,7 +806,7 @@ header h2 {
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
-  background-color: rgba(0, 0, 0, 0.448);
+  background-color: rgba(72, 75, 81, 0.7215686275);
 }
 .fonctionnement-details .card-fonctionnement .accumulation-content {
   flex: 1;
@@ -960,7 +960,7 @@ main::before,
   margin: 0 auto;
 }
 .container-card .card {
-  background-color: black;
+  background-color: rgba(72, 75, 81, 0.7215686275);
   border-radius: 1rem;
   border: 0.5px solid;
   border-color: #ad856f;

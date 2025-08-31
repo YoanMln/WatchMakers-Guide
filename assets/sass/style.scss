@@ -747,7 +747,7 @@ $timeline-width: 700px;
     justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
-    background-color: rgba(0, 0, 0, 0.448);
+    background-color: #484b51b8;
 
     .accumulation-content {
       flex: 1;
@@ -911,7 +911,7 @@ main,
   }
 
   .card {
-    background-color: black;
+    background-color: #484b51b8;
     border-radius: 1rem;
     border: 0.5px solid;
     border-color: $bronze;
