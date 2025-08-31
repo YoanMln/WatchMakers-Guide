@@ -12,6 +12,11 @@ function getSeoData($pages)
             'description' => "Portail vers la découverte du monde horloger",
         ],
 
+        'Complications' => [
+            'title' => "Les Complications | Watchmakers Guide",
+            'description' => "Explorez les mécanismes les plus complexes grâce à des rendus 3D.",
+        ],
+
         'MesureDuTemps' => [
             'title' => "Mesure du temps - Frise historique | Watchmakers Guide",
             'description' => "Découvrez les grandes étapes de la mesure du temps à travers une frise chronologique interactive.",

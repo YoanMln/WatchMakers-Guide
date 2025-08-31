@@ -14,11 +14,11 @@
                     <a class="gate-btn" href="index.php?pages=MesureDuTemps">Commencer le voyage</a>
                 </div>
             </div>
-            <div class="gate complication-gate coming-soon">
+            <div class="gate complication-gate ">
                 <h2>Les complications</h2>
                 <p class="gate-description">Explorez les mécanismes les plus complexes</p>
                 <div class="gate-action">
-                    <a class="gate-btn btn-disabled" href="#">Prochainement...</a>
+                    <a class="gate-btn" href="index.php?pages=Complications">Explorez</a>
                 </div>
             </div>
             <div class="gate quiz-gate">
