@@ -5,6 +5,7 @@
 
     </div>
 </footer>
+<script type="module" src="./script/app.js"></script>
 <script src="script/quiz.js"></script>
 <script src="script/burger-menu.js"></script>
 <script src="script/nav.js"></script>
