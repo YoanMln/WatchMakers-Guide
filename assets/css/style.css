@@ -21,28 +21,36 @@ body {
   margin: 0;
   padding: 0;
   padding-top: 50px;
+  background-color: #181818;
+  /*
+  &[data-page="Outils-de-lhorloger"] {
+    background: url("../images/img/main-outils.webp") center/cover fixed
+      no-repeat;
+  }
+
+  &[data-page="Quiz"] {
+    background: url("../images/img/bg-home.webp") center/cover fixed no-repeat;
+  }
+
+  &[data-page="Decouvrir"] {
+    background: url("../images/img/bg-home.webp") center/cover fixed no-repeat;
+  }
+
+  &[data-page="Techniques"] {
+    background: url("../images/img/main-techniques.webp") center/cover fixed
+      no-repeat;
+  }
+  &[data-page="MesureDuTemps"] {
+    background-color: $black-background;
+  }
+  &[data-page="Fonctionnement"] {
+    background-color: $black-background;
+  }
+    */
 }
 body[data-page=home] {
-  background: url("../images/img/bg-home.webp") center/cover fixed no-repeat;
-  padding-top: 0;
-}
-body[data-page=Outils-de-lhorloger] {
-  background: url("../images/img/main-outils.webp") center/cover fixed no-repeat;
-}
-body[data-page=Quiz] {
-  background: url("../images/img/bg-home.webp") center/cover fixed no-repeat;
-}
-body[data-page=Decouvrir] {
-  background: url("../images/img/bg-home.webp") center/cover fixed no-repeat;
-}
-body[data-page=Techniques] {
   background: url("../images/img/main-techniques.webp") center/cover fixed no-repeat;
-}
-body[data-page=MesureDuTemps] {
-  background-color: #141615;
-}
-body[data-page=Fonctionnement] {
-  background-color: #141615;
+  padding-top: 0;
 }
 
 h1,
@@ -80,7 +88,7 @@ button:not(.btn-quiz) {
 }
 button:not(.btn-quiz):hover {
   background-color: #ad856f;
-  color: lightgrey;
+  color: #f5f5f5;
   box-shadow: 0 0 5px #2c2c2c;
 }
 
@@ -133,7 +141,7 @@ nav {
 .nav-menu li a {
   text-decoration: none;
   font-size: 25px;
-  color: lightgrey;
+  color: #f5f5f5;
   font-weight: 300;
   transition: color 0.3s ease;
   font-family: "Alumni Sans", sans-serif;
@@ -160,7 +168,7 @@ nav {
   display: none;
 }
 .nav-burger .ligne {
-  background: lightgrey;
+  background: #f5f5f5;
   width: 100%;
   height: 1px;
   border-radius: 2px;
@@ -200,7 +208,7 @@ main {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background: url("../images/img/bg-home.webp") center/cover no-repeat;
+  /*background: url("../images/img/bg-home.webp") center/cover no-repeat;*/
   padding: 4rem 0;
 }
 header::before,
@@ -208,7 +216,6 @@ main::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(40, 40, 43, 0.8), rgba(40, 40, 43, 0.6));
   z-index: 1;
 }
 
@@ -218,7 +225,7 @@ main::before {
   max-width: 1000px;
   width: 100%;
   padding: 5rem;
-  color: lightgrey;
+  color: #f5f5f5;
   text-align: center;
   background-color: rgba(17, 17, 17, 0.6666666667);
   border-radius: 5px;
@@ -235,7 +242,7 @@ header h1 {
 
 header h2 {
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  color: lightgrey;
+  color: #f5f5f5;
   font-weight: 300;
   line-height: 1.4;
   margin: 2rem auto;
@@ -283,7 +290,7 @@ header h2 {
 }
 .btn-container-home a:hover {
   background-color: #ad856f;
-  color: lightgrey;
+  color: #f5f5f5;
   box-shadow: 0 0 5px #2c2c2c;
   transform: translateY(-3px);
 }
@@ -306,7 +313,7 @@ header h2 {
   transition: color 0.3s ease;
 }
 .nav-home-list a:hover {
-  color: lightgrey;
+  color: #f5f5f5;
   text-decoration: underline;
 }
 
@@ -317,7 +324,7 @@ header h2 {
   max-width: 1500px;
   width: 100%;
   padding: 5rem;
-  color: lightgrey;
+  color: #f5f5f5;
   text-align: center;
   background-color: rgba(17, 17, 17, 0.6666666667);
   border-radius: 5px;
@@ -369,7 +376,7 @@ header h2 {
   font-size: 1rem;
 }
 .gate .gate-description {
-  color: lightgrey;
+  color: #f5f5f5;
   text-align: center;
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -378,7 +385,7 @@ header h2 {
 
 .gate-btn {
   text-decoration: none;
-  color: lightgrey;
+  color: #f5f5f5;
   border: 1px solid #ad856f;
   border-radius: 5px;
   padding: 0.8rem 1.5rem;
@@ -394,14 +401,14 @@ header h2 {
   box-shadow: 0 5px 15px rgba(173, 133, 111, 0.3);
 }
 .gate-btn.btn-disabled {
-  background-color: rgba(211, 211, 211, 0.1);
-  color: rgba(211, 211, 211, 0.5);
-  border-color: rgba(211, 211, 211, 0.2);
+  background-color: rgba(245, 245, 245, 0.1);
+  color: rgba(245, 245, 245, 0.5);
+  border-color: rgba(245, 245, 245, 0.2);
   cursor: not-allowed;
 }
 .gate-btn.btn-disabled:hover {
   transform: none;
-  background-color: rgba(211, 211, 211, 0.1);
+  background-color: rgba(245, 245, 245, 0.1);
   box-shadow: none;
 }
 
@@ -513,7 +520,7 @@ header h2 {
 .timeline-header__subtitle {
   font-size: 22px;
   font-weight: 300;
-  color: lightgrey;
+  color: #f5f5f5;
   letter-spacing: 1.5px;
   margin-top: 20px;
 }
@@ -565,7 +572,7 @@ header h2 {
 }
 
 .complication-text {
-  color: lightgrey;
+  color: #f5f5f5;
   font-size: 1.1rem;
   line-height: 1.8;
   text-align: justify;
@@ -604,7 +611,7 @@ header h2 {
 }
 
 .sub-text {
-  color: lightgrey;
+  color: #f5f5f5;
 }
 
 .container-btn-difficulty {
@@ -629,7 +636,7 @@ header h2 {
 
 .btn-quiz {
   text-decoration: none;
-  color: lightgrey;
+  color: #f5f5f5;
   border: 1px solid #ad856f;
   border-radius: 5px;
   background: rgba(40, 40, 43, 0.55);
@@ -666,7 +673,7 @@ header h2 {
 
 .btn-retry {
   text-decoration: none;
-  color: lightgrey;
+  color: #f5f5f5;
   border: 1px solid #ad856f;
   border-radius: 5px;
   background: rgba(40, 40, 43, 0.55);
@@ -703,7 +710,7 @@ header h2 {
   padding: 8px 16px;
   border: 1px solid #ad856f;
   background: transparent;
-  color: lightgrey;
+  color: #f5f5f5;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
@@ -719,7 +726,6 @@ header h2 {
 
 /* ------------------ FONCTIONNEMENT ------------------ */
 .fonctionnement {
-  background-color: #141615;
   padding: 2rem 0;
 }
 
@@ -735,7 +741,7 @@ header h2 {
 }
 
 .intro {
-  color: lightgrey;
+  color: #f5f5f5;
   margin-top: 1rem;
 }
 
@@ -752,7 +758,7 @@ header h2 {
   text-align: center;
 }
 .card-watch-parts .intro-card {
-  color: lightgrey;
+  color: #f5f5f5;
   text-align: center;
 }
 .card-watch-parts .details {
@@ -762,7 +768,7 @@ header h2 {
 }
 .card-watch-parts .details .details-list {
   list-style: none;
-  color: lightgrey;
+  color: #f5f5f5;
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -812,7 +818,7 @@ header h2 {
   color: #ad856f;
 }
 .fonctionnement-details .card-fonctionnement .resume-details {
-  color: lightgrey;
+  color: #f5f5f5;
   text-align: left;
   line-height: 1.6;
   margin: 0;
@@ -834,7 +840,7 @@ header h2 {
   object-fit: contain;
 }
 
-/* ------------------ OUTILS DE L'HORLOGER ------------------ */
+/* ------------- TECHNIQUES / OUTILS DE L'HORLOGER --------------- */
 main,
 .techniques-page,
 .tools-page {
@@ -852,7 +858,6 @@ main::before,
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(40, 40, 43, 0.7);
   z-index: 1;
 }
 
@@ -868,7 +873,7 @@ main::before,
   font-size: 2rem;
 }
 .title-pages h2 {
-  color: lightgrey;
+  color: #f5f5f5;
   text-align: center;
   margin-top: 1rem;
   font-size: 2rem;
@@ -893,7 +898,7 @@ main::before,
   text-align: center;
 }
 .container-select .list-choice label {
-  color: lightgrey;
+  color: #f5f5f5;
   font-size: 1.2rem;
   font-weight: 300;
   text-shadow: 1px 1px 2px rgba(40, 40, 43, 0.5);
@@ -918,14 +923,14 @@ main::before,
   border: 1px solid #ad856f;
   border-radius: 2px;
   background-color: rgba(40, 40, 43, 0.9);
-  color: lightgrey;
+  color: #f5f5f5;
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .container-select .list-choice select option {
   background-color: rgba(40, 40, 43, 0.95);
-  color: lightgrey;
+  color: #f5f5f5;
   padding: 1rem;
   font-size: 1rem;
 }
@@ -955,7 +960,7 @@ main::before,
   margin: 0 auto;
 }
 .container-card .card {
-  background-color: rgba(0, 0, 0, 0.734);
+  background-color: black;
   border-radius: 1rem;
   border: 0.5px solid;
   border-color: #ad856f;
@@ -981,13 +986,13 @@ main::before,
   font-weight: 300;
 }
 .container-card .card p {
-  color: lightgrey;
+  color: #f5f5f5;
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 300;
 }
 .container-card .card li {
-  color: lightgrey;
+  color: #f5f5f5;
 }
 
 .list-custom {
@@ -999,7 +1004,7 @@ main::before,
   margin-bottom: 0.1rem;
   padding: 0.5rem 0;
   position: relative;
-  color: lightgrey;
+  color: #f5f5f5;
   line-height: 1.5;
 }
 .list-custom li:before {
@@ -1018,7 +1023,7 @@ main::before,
   background-color: rgba(40, 40, 43, 0.95);
   padding: 10px 10px;
   text-align: center;
-  color: lightgrey;
+  color: #f5f5f5;
   backdrop-filter: blur(3px);
   font-family: "Alumni Sans", sans-serif;
   position: relative;
@@ -1276,7 +1281,7 @@ main::before,
     color: #ad856f;
   }
   .fonctionnement-details .card-fonctionnement .resume-details {
-    color: lightgrey !important;
+    color: #f5f5f5 !important;
     text-align: left;
     line-height: 1.6;
     font-size: 1rem;
@@ -1344,13 +1349,13 @@ main::before,
     opacity: 0.6;
   }
   .gate.coming-soon .gate-btn {
-    background-color: rgba(211, 211, 211, 0.05) !important;
-    color: rgba(211, 211, 211, 0.4) !important;
-    border-color: rgba(211, 211, 211, 0.2) !important;
+    background-color: rgba(245, 245, 245, 0.05) !important;
+    color: rgba(245, 245, 245, 0.4) !important;
+    border-color: rgba(245, 245, 245, 0.2) !important;
   }
   .gate.coming-soon .gate-btn:hover {
     transform: none !important;
-    background-color: rgba(211, 211, 211, 0.05) !important;
+    background-color: rgba(245, 245, 245, 0.05) !important;
   }
   .header-container-complications {
     margin: 1rem;
