@@ -10,7 +10,7 @@
     "sass": "sass --watch assets/sass/style.scss assets/css/style.css"
   },
   "dependencies": {
-    "sass": "^1.89.2"
+    "sass": "^1.90.0"
   },
   "repository": {
     "type": "git",
