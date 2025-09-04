@@ -1,0 +1,39 @@
+/* IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+// ABSTRACTS //
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// BASE //
+
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+
+// COMPONENTS //
+
+@import "components/burger-menu";
+@import "components/buttons";
+@import "components/navigation";
+
+// LAYOUT //
+
+@import "layout/footer";
+@import "layout/header";
+
+// PAGES-STYLE //
+
+@import "pages-style/discovery";
+@import "pages-style/complications";
+@import "pages-style/fonctionnement";
+@import "pages-style/home";
+@import "pages-style/quiz";
+@import "pages-style/techniques-outils";
+@import "pages-style/timeline";
+
+// UTILITIES //
+
+@import "utilities/responsive";

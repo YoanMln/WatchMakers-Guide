@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch assets/sass/style.scss assets/css/style.css"
+    "sass": "sass --watch assets/sass/main.scss assets/css/style.css"
   },
   "dependencies": {
     "sass": "^1.89.2"

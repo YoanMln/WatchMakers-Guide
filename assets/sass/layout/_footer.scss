@@ -1,0 +1,29 @@
+/* ------------------ FOOTER ------------------ */
+.footer {
+  background-color: rgba($matte-black, 0.95);
+  padding: 10px 10px;
+  text-align: center;
+  color: $light;
+  backdrop-filter: blur(3px);
+  font-family: "Alumni Sans", sans-serif;
+  position: relative;
+  z-index: 10;
+
+  &__name {
+    font-size: 30px;
+    color: $bronze;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: $font-weight300;
+  }
+
+  &__text {
+    font-size: 20px;
+    margin-bottom: 15px;
+
+    & a {
+      text-decoration: underline;
+      color: $bronze;
+    }
+  }
+}

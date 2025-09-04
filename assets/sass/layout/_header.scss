@@ -1,0 +1,77 @@
+/* ------------------ HEADER ------------------ */
+header,
+main {
+  @include flexCenter;
+  position: $header-position;
+  min-height: $header-min-height;
+  width: $header-width;
+  /*background: url("../images/img/bg-home.webp") center/cover no-repeat;*/
+  padding: $header-padding;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+}
+
+.header-container {
+  position: $header-container-position;
+  z-index: $header-container-z-index;
+  max-width: $header-container-max-width;
+  width: $header-container-width;
+  padding: $header-container-padding;
+  color: $light;
+  text-align: $header-container-text-align;
+  background-color: #111111aa;
+  border-radius: 5px;
+}
+
+header h1 {
+  font-size: $header-h1-font-size-clamp;
+  font-weight: $header-h1-font-weight;
+  margin-bottom: $header-h1-margin-bottom;
+  text-transform: uppercase;
+  letter-spacing: $header-h1-letter-spacing;
+  text-shadow: 2px 2px 4px rgba($matte-black, 0.5);
+}
+
+header h2 {
+  font-size: $header-h2-font-size-clamp;
+  color: $light;
+  font-weight: $header-h2-font-weight;
+  line-height: $header-h2-line-height;
+  margin: $header-h2-margin;
+  max-width: $header-h2-max-width;
+  text-shadow: 1px 1px 2px rgba($matte-black, 0.3);
+}
+
+.intro-container {
+  @include flexCenter;
+  width: $intro-container-width;
+  height: $intro-container-height;
+  margin: $intro-container-margin;
+}
+
+.btn-container-home {
+  @include flexCenter;
+  gap: $btn-container-home-gap;
+  margin-top: $btn-container-home-margin-top;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: $btn-home-a-text-decoration;
+    font-size: $btn-home-a-font-size;
+    min-width: $btn-home-a-min-width;
+    padding: $btn-home-a-padding;
+    text-align: $btn-home-a-text-align;
+    @include btnStyle;
+    transition: $btn-home-a-transition;
+
+    &:hover {
+      @include btnStyleHover;
+      transform: $btn-home-a-transform;
+    }
+  }
+}

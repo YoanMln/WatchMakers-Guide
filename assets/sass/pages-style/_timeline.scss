@@ -1,0 +1,139 @@
+/* ------------------ MESURE DU TEMPS ------------------ */
+@mixin responsive() {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+$timeline-width: 700px;
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: $timeline-width;
+  position: relative;
+  background-color: #111;
+
+  &__content {
+    &-title {
+      font-weight: $font-weight300;
+      font-size: 45px;
+      margin: -10px 0 0;
+      padding: 0 10px;
+      color: $bronze;
+      transition: 0.4s;
+    }
+
+    &-date {
+      margin: 0;
+      color: white;
+      font-size: 27px;
+      font-weight: $font-weight300;
+      line-height: 30px;
+    }
+
+    &-desc {
+      margin: 0;
+      font-size: 20px;
+      font-weight: $font-weight300;
+      color: white;
+      line-height: 27px;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    background: $bronze;
+  }
+
+  &-item {
+    width: calc(50% - 40px);
+    padding: 40px 0;
+    display: flex;
+    position: relative;
+    opacity: 0.6;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+    &:before {
+      content: attr(data-text);
+      position: absolute;
+      top: 70%;
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.8);
+      padding-left: 15px;
+      border-left: 2px solid rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      right: calc(-100% - 56px);
+      transition: all 0.3s ease;
+    }
+
+    &:nth-child(even) {
+      align-self: flex-end;
+
+      &:before {
+        left: calc(-100% - 56px);
+        right: auto;
+        padding-left: 0;
+        padding-right: 15px;
+        border-left: none;
+        border-right: 2px solid rgba(255, 255, 255, 0.5);
+        text-align: right;
+      }
+    }
+
+    &--active {
+      opacity: 1;
+      transform: translateY(0);
+
+      &:before {
+        top: 50%;
+        opacity: 1;
+      }
+
+      .timeline__content-title {
+        margin: -50px 0 20px;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  &-container {
+    width: 100%;
+    padding: 80px 0;
+    position: relative;
+    background-color: #111;
+  }
+
+  &-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 80px;
+
+    &__title {
+      font-size: 46px;
+
+      margin: 0;
+    }
+
+    &__subtitle {
+      font-size: 22px;
+      font-weight: 300;
+      color: $light;
+      letter-spacing: 1.5px;
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,191 @@
+/* ------------- TECHNIQUES / OUTILS DE L'HORLOGER --------------- */
+main,
+.techniques-page,
+.tools-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 0 0 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+.title-pages {
+  @include flexCenter;
+  @include column;
+  position: relative;
+  z-index: 2;
+  margin: $margin-top-h1 0 2rem;
+  font-weight: $font-weight300;
+  font-size: $h1-font-size;
+
+  h2 {
+    color: $light;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba($matte-black, 0.5);
+    font-weight: $font-weight300;
+  }
+}
+
+.container-select {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  margin-top: 5rem;
+
+  .list-choice {
+    @include flexCenter;
+    flex-direction: column;
+    text-align: center;
+
+    label {
+      color: $light;
+      font-size: 1.2rem;
+      font-weight: 300;
+      text-shadow: 1px 1px 2px rgba($matte-black, 0.5);
+    }
+
+    .select-wrapper {
+      position: relative;
+      width: 100%;
+
+      &::after {
+        color: $bronze;
+        pointer-events: none;
+        font-size: 0.8rem;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    select {
+      appearance: none;
+      width: 100%;
+      padding: 1rem 2.5rem 1rem 1rem;
+      border: 1px solid $bronze;
+      border-radius: 2px;
+      background-color: rgba($matte-black, 0.9);
+      color: $light;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      option {
+        background-color: rgba($matte-black, 0.95);
+        color: $light;
+        padding: 1rem;
+        font-size: 1rem;
+
+        &:hover {
+          background-color: $bronze;
+        }
+      }
+
+      &:hover {
+        background-color: rgba($matte-black, 0.95);
+        border-color: $bronze;
+        box-shadow: 0 0 15px rgba($bronze, 0.3);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($bronze, 0.4);
+      }
+    }
+  }
+}
+
+.container-card {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background-color: #484b51b8;
+    border-radius: 1rem;
+    border: 0.5px solid;
+    border-color: $bronze;
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px rgba($matte-black, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba($matte-black, 0.15);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      color: $bronze;
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      font-weight: $font-weight300;
+    }
+
+    p {
+      color: $light;
+      font-size: 1rem;
+      line-height: 1.6;
+      font-weight: $font-weight300;
+    }
+
+    li {
+      color: $light;
+    }
+  }
+}
+.list-custom {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+
+  li {
+    margin-bottom: 0.1rem;
+    padding: 0.5rem 0;
+    position: relative;
+    color: $light;
+    line-height: 1.5;
+
+    &:before {
+      content: "•";
+      color: $bronze;
+      font-weight: bold;
+      position: absolute;
+      left: -1rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

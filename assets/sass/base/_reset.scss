@@ -1,0 +1,9 @@
+/* ------------------ RESET GÉNÉRAL ------------------ */
+*,
+*::before,
+*::after {
+  margin: $margin-reset;
+  padding: $padding-reset;
+  box-sizing: $box-sizing-reset;
+  scroll-behavior: $scroll-behavior-reset;
+}

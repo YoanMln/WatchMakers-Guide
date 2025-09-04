@@ -1,0 +1,88 @@
+/* ------------------ NAVIGATION ------------------ */
+nav {
+  width: $nav-width;
+  height: $nav-heigt;
+  @include flexCenter;
+  justify-content: space-between;
+  padding: $nav-padding;
+
+  z-index: $nav-z-index;
+  background-color: rgba($matte-black, 0.95);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 1s ease-in-out;
+}
+
+.nav-logo {
+  width: $nav-logo-width;
+  height: $nav-logo-height;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: $nav-img-width;
+    height: $nav-img-height;
+    object-fit: $nav-img-objet-fit;
+    margin-top: $nav-img-margin-top;
+    border-radius: $nav-img-border-radius;
+  }
+}
+
+.title {
+  display: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  position: relative;
+
+  li {
+    margin: 0 1rem;
+    position: relative;
+
+    a {
+      text-decoration: none;
+      font-size: 25px;
+      color: $light;
+      font-weight: $font-weight300;
+      transition: color 0.3s ease;
+      font-family: "Alumni Sans", sans-serif;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $bronze;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+/* ------------------ NAV-HOME DESKTOP ------------------ */
+.nav-home-list {
+  @include flexCenter;
+  list-style: none;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: $bronze;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $light;
+      text-decoration: underline;
+    }
+  }
+}
