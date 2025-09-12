@@ -1,10 +1,16 @@
+/*
+ * WatchMakers Guide - Site éducatif horlogerie
+ * Copyright (C) 2025 Yoan Moulin
+ * Licensed under GNU AGPL v3.0
+ */
+
 /* ------------------ BOUTONS ------------------ */
 button:not(.btn-quiz) {
-    @include btnStyle;
-    transition: $transition-btn;
-    cursor: $cursor-btn;
-  
-    &:hover {
-      @include btnStyleHover;
-    }
+  @include btnStyle;
+  transition: $transition-btn;
+  cursor: $cursor-btn;
+
+  &:hover {
+    @include btnStyleHover;
   }
+}

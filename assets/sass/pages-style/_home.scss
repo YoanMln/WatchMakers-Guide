@@ -1,0 +1,29 @@
+/*
+ * WatchMakers Guide - Site éducatif horlogerie
+ * Copyright (C) 2025 Yoan Moulin
+ * Licensed under GNU AGPL v3.0
+ */
+
+@import "variables";
+@import "mixins";
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: $background-color;
+
+  .home__title {
+    font-size: 2rem;
+    color: $primary-color;
+  }
+
+  .home__description {
+    font-size: 1.2rem;
+    color: $secondary-color;
+    text-align: center;
+    max-width: 600px;
+  }
+}
